@@ -488,6 +488,12 @@
       .hero-card { padding: 28px 20px; }
       .phones-group { flex-direction: column; width: 100%; }
       .phones-group .button { width: 100%; }
+      
+      /* НОВЫЕ ПРАВКИ: */
+      /* 1. Делаем портфолио в 1 красивую колонку */
+      .portfolio-grid { grid-template-columns: 1fr; }
+      /* 2. Разрешаем длинному тексту переноситься на новую строку */
+      .hero-eyebrow { flex-wrap: wrap; justify-content: center; text-align: center; line-height: 1.4; padding: 10px 14px; }
     }
   </style>
 </head>
