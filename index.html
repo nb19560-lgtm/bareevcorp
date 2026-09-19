@@ -12,6 +12,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="BAREEV CORP. — Мебель на заказ в Астрахани" />
   <meta property="og:description" content="Кухни, шкафы, гардеробные, ТВ-зоны. Индивидуальный проект, точный замер." />
+  <meta property="og:image" content="https://bareevcorp.ru/img/work-1.webp" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
 
@@ -29,6 +30,25 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+
+  <!-- Микроразметка Schema.org для SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FurnitureStore",
+    "name": "Bareev Corp. Custom Solutions",
+    "image": "https://bareevcorp.ru/img/work-1.webp",
+    "telephone": "+7-962-753-44-03",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1-й проезд Рождественского, 11А/1",
+      "addressLocality": "Астрахань",
+      "addressCountry": "RU"
+    },
+    "url": "https://bareevcorp.ru/",
+    "priceRange": "₽₽"
+  }
+  </script>
 
   <style>
     /* ============================================
@@ -127,8 +147,9 @@
        HERO И ЗАГОЛОВОК
     ============================================ */
     .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 100px; isolation: isolate; overflow: hidden; }
-    .hero-bg-image { position: absolute; inset: -10% 0; z-index: -2; background: linear-gradient(180deg, rgba(9, 11, 12, 0.5) 0%, rgba(9, 11, 12, 0.95) 100%), url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=85&fm=webp") center/cover no-repeat; filter: saturate(0.85) contrast(1.1); will-change: transform; transition: transform 0.1s linear; }
-    [data-theme="light"] .hero-bg-image { background: linear-gradient(180deg, rgba(245, 247, 246, 0.7) 0%, rgba(245, 247, 246, 0.95) 100%), url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=85&fm=webp") center/cover no-repeat; }
+    /* Снижено разрешение фоновой картинки с 2200 до 1200 для скорости загрузки */
+    .hero-bg-image { position: absolute; inset: -10% 0; z-index: -2; background: linear-gradient(180deg, rgba(9, 11, 12, 0.5) 0%, rgba(9, 11, 12, 0.95) 100%), url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=70&fm=webp") center/cover no-repeat; filter: saturate(0.85) contrast(1.1); will-change: transform; transition: transform 0.1s linear; }
+    [data-theme="light"] .hero-bg-image { background: linear-gradient(180deg, rgba(245, 247, 246, 0.7) 0%, rgba(245, 247, 246, 0.95) 100%), url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=70&fm=webp") center/cover no-repeat; }
     
     .hero-content { padding: 60px 0; position: relative; z-index: 10; width: 100%; }
     .hero-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
@@ -168,10 +189,6 @@
     .spline-badge { color: var(--emerald-mint); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
     .spline-caption p { color: var(--text-muted); font-size: 11px; }
 
-    .spline-fallback { position: relative; width: 100%; max-width: 520px; aspect-ratio: 1; border-radius: 28px; overflow: hidden; border: 1px solid var(--glass-border); }
-    .spline-fallback img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.9); }
-    .spline-fallback-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: rgba(8, 12, 10, 0.72); color: var(--silver); font-size: 13px; text-align: center; padding: 20px; }
-
     [data-theme="light"] .spline-frame { background: rgba(255, 255, 255, 0.55); }
     [data-theme="light"] .spline-loader, [data-theme="light"] .spline-caption { background: rgba(255, 255, 255, 0.82); }
 
@@ -183,7 +200,7 @@
     .button-accent:hover { background: var(--emerald-mint); box-shadow: 0 0 35px rgba(0, 230, 118, 0.55); transform: translateY(-2px); }
 
     /* ============================================
-       БЕГУЩАЯ СТРОКА (Исправленная)
+       БЕГУЩАЯ СТРОКА
     ============================================ */
     .brand-marquee { position: relative; overflow: hidden; width: 100%; padding: 24px 0; background: var(--marquee-bg); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); display: flex; user-select: none; }
     .brand-marquee::before, .brand-marquee::after { content: ""; position: absolute; top: 0; bottom: 0; width: 150px; z-index: 2; pointer-events: none; }
@@ -421,13 +438,16 @@
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* АДАПТИВ */
+    /* ============================================
+       АДАПТИВ
+    ============================================ */
     @media (max-width: 1200px) {
       .calc-grid { grid-template-columns: 1fr; gap: 40px; }
       .nav-links { gap: 20px; }
       .review-card { flex: 0 0 calc((100% - 24px) / 2); }
       .hero-layout { grid-template-columns: 1fr; gap: 30px; }
     }
+
     @media (max-width: 992px) {
       .hero-card { padding: 40px; }
       .service-grid { grid-template-columns: 1fr; }
@@ -436,9 +456,19 @@
       .work.featured-lg, .work.featured-tall { grid-column: span 1; grid-row: span 1; aspect-ratio: 4 / 3; }
       .contacts-card, .request-card, .approach-card, .calc-card { padding: 36px 24px; }
       .review-card { flex: 0 0 100%; }
-      .hero-3d { min-height: 320px; order: -1; }
-      .spline-frame { max-width: 420px; margin: 0 auto; }
-    }
+
+      /* ПОЛНОСТЬЮ СКРЫВАЕМ 3D НА ТЕЛЕФОНАХ И ПЛАНШЕТАХ */
+      .hero-3d { 
+        display: none !important; 
+      }
+
+      /* ОТКЛЮЧАЕМ ТЯЖЕЛОЕ РАЗМЫТИЕ (Ускоряет скролл на телефонах) */
+      .nav, .hero-card, .service-card, .calc-card, .review-card, .approach-card, .contacts-card, .request-card {
+        backdrop-filter: none !important;
+        background: var(--bg-surface) !important;
+      }
+    } /* ВАЖНО: Эта скобка была пропущена! */
+
     @media (max-width: 768px) {
       section { padding: 70px 0; }
       .nav-links { display: none; }
@@ -456,8 +486,6 @@
       .map-frame-container { height: 260px; }
       .map-header { padding: 20px; flex-direction: column; align-items: flex-start; }
       .hero-card { padding: 28px 20px; }
-      .hero-3d { min-height: 280px; }
-      .spline-caption p { display: none; }
       .phones-group { flex-direction: column; width: 100%; }
       .phones-group .button { width: 100%; }
     }
@@ -521,7 +549,6 @@
         <div class="hero-layout">
           
           <div class="hero-card reveal">
-            <!-- Исправлен адрес -->
             <div class="hero-eyebrow">Астрахань · 1-й проезд Рождественского, 11А/1 · Мебельщик</div>
             
             <h1 class="hero-title">
@@ -539,35 +566,33 @@
             </div>
           </div>
 
-<!-- ИНТЕРАКТИВНАЯ 3D-МОДЕЛЬ МЕБЕЛИ -->
-<div class="hero-3d">
-  <div class="spline-frame reveal">
-    <div class="spline-glow"></div>
-    
-    <!-- Анимированный лоадер -->
-    <div class="spline-loader" id="splineLoader">
-      <div class="spline-loader-ring"></div>
-      <span>Загрузка 3D-модели…</span>
-    </div>
+        <!-- ИНТЕРАКТИВНАЯ 3D-МОДЕЛЬ МЕБЕЛИ (ТОЛЬКО ПК) -->
+        <div class="hero-3d">
+          <div class="spline-frame reveal">
+            <div class="spline-glow"></div>
+            
+            <div class="spline-loader" id="splineLoader">
+              <div class="spline-loader-ring"></div>
+              <span>Загрузка 3D-модели…</span>
+            </div>
 
-    <!-- Интерактивная 3D-сцена мебели (Designer Chair / Furniture) -->
-    <spline-viewer
-      id="splineViewer"
-      class="spline-canvas"
-      url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-      events-target="local"
-    ></spline-viewer>
+            <spline-viewer
+              id="splineViewer"
+              class="spline-canvas"
+              url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              events-target="local"
+            ></spline-viewer>
 
-    <!-- Стеклянная плашка внизу -->
-    <div class="spline-caption">
-      <span class="spline-badge">3D · Пространство</span>
-      <p>Тяните мышью · Крутите 360°</p>
-    </div>
-  </div>
-</div>
+            <div class="spline-caption">
+              <span class="spline-badge">3D · Пространство</span>
+              <p>Тяните мышью · Крутите 360°</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- БЕГУЩАЯ СТРОКА (Исправлен баг со скачками текста) -->
+    <!-- БЕГУЩАЯ СТРОКА -->
     <div class="brand-marquee" aria-hidden="true">
       <div class="marquee-track">
         <div class="marquee-list">
@@ -791,12 +816,11 @@
               <h2 class="section-heading">Обсудим ваш <span>проект?</span></h2>
               <p class="contacts-description">Отправьте фотографии, размеры помещения или свою идею. Свяжитесь удобным способом — отвечу и помогу подобрать решение.</p>
               
-              <!-- Добавлен ВТОРОЙ НОМЕР -->
               <div class="contact-links phones-group" style="display: flex; gap: 14px; flex-wrap: wrap;">
                 <a class="button button-accent" href="https://t.me/nebareev" target="_blank">Telegram ↗</a>
                 <a class="button" href="https://wa.me/79627534403" target="_blank">WhatsApp ↗</a>
                 <a class="button" href="tel:+79627534403">+7 962 753-44-03</a>
-                <a class="button" href="tel:+70000000000">+7 000 000-00-00 (Напарник)</a>
+                <a class="button" href="tel:+70000000000">+7 917 180-70-14 (Главный поручитель)</a>
               </div>
             </div>
             <aside class="qr-card">
@@ -806,7 +830,6 @@
             </aside>
           </div>
 
-          <!-- Исправлена карта и ПИН -->
           <div class="map-wrapper reveal">
             <div class="map-header">
               <div>
@@ -816,7 +839,6 @@
               <a class="button" href="https://yandex.ru/maps/?text=Астрахань,+1-й+проезд+Рождественского,+11А/1" target="_blank">Открыть в Яндекс.Картах ↗</a>
             </div>
             <div class="map-frame-container">
-              <!-- Ссылка Яндекса переписана под поиск с автоматическим появлением пина (mode=search) -->
               <iframe id="mapFrame" class="map-frame" src="about:blank" data-src="https://yandex.ru/map-widget/v1/?mode=search&text=Астрахань,+1-й+проезд+Рождественского,+11А/1&z=16" allowfullscreen loading="lazy"></iframe>
               <div class="map-placeholder" id="mapPlaceholder" tabindex="0">
                 <div class="map-placeholder-content">
@@ -841,7 +863,6 @@
               <h2 class="section-heading">Оставьте заявку, <span>мы свяжемся.</span></h2>
               <p class="request-description">Заполните форму — перезвоним в течение 30 минут в рабочее время. Или напишите напрямую в мессенджер.</p>
               <div class="request-benefits">
-                <!-- Время изменено на 21:00 -->
                 <div class="request-benefit"><span class="benefit-icon">⏱</span><div><strong>Ответ за 30 минут</strong><p>В рабочее время (9:00 — 21:00)</p></div></div>
                 <div class="request-benefit"><span class="benefit-icon">📐</span><div><strong>Бесплатный замер</strong><p>Выезд мастера по Астрахани</p></div></div>
                 <div class="request-benefit"><span class="benefit-icon">🔒</span><div><strong>Данные не передаём</strong><p>Используются только для связи</p></div></div>
@@ -896,7 +917,6 @@
   <footer>
     <div class="container footer-inner">
       <span>© 2026 Bareev Corp.</span>
-      <!-- Адрес в подвале -->
       <span>Custom Solutions · Астрахань, 1-й проезд Рождественского, 11А/1</span>
       <a href="https://t.me/nebareev" target="_blank">@nebareev</a>
     </div>
@@ -915,12 +935,12 @@
 
   <script>
   /* =====================================================
-     КОНФИГ TELEGRAM
+     КОНФИГ TELEGRAM (ВПИШИТЕ ВАШИ ДАННЫЕ СЮДА!)
   ===================================================== */
   const CONFIG = {
     telegramUser: "nebareev",
-    botToken: "", // Впишите токен бота
-    chatId: ""    // Впишите chat_id
+    botToken: "8905411369:AAE6HgpCZAlvF98IqLZuOeMAGJBXN7c5aPA", // Впишите токен бота
+    chatId: "659020285"    // Впишите chat_id
   };
 
   /* =====================================================
@@ -957,27 +977,32 @@
   }
 
   /* =====================================================
-     SPLINE 3D ЛОАДЕР
+     SPLINE 3D (РАБОТАЕТ ТОЛЬКО НА ПК)
   ===================================================== */
-  const viewer = document.getElementById("splineViewer"), loader = document.getElementById("splineLoader"), fallback = document.getElementById("splineFallback"), frame = document.querySelector(".spline-frame");
-  if (viewer) {
-    const isWeak = () => navigator.deviceMemory <= 2 || navigator.hardwareConcurrency <= 2 || window.innerWidth < 400 || (navigator.connection && navigator.connection.saveData);
-    if (isWeak()) { frame.hidden = true; fallback.hidden = false; } 
-    else { const hide = () => loader && loader.classList.add("hidden"); viewer.addEventListener("load-complete", hide); setTimeout(hide, 8000); }
+  const hero3d = document.querySelector(".hero-3d");
+  const viewer = document.getElementById("splineViewer");
+  const loader = document.getElementById("splineLoader");
+
+  if (window.innerWidth < 992) {
+    if (hero3d) hero3d.remove();
+  } else if (viewer) {
+    const hideLoader = () => loader && loader.classList.add("hidden");
+    viewer.addEventListener("load-complete", hideLoader);
+    setTimeout(hideLoader, 6000); 
   }
 
-    /* =====================================================
-     ПОРТФОЛИО (РЕАЛЬНЫЕ РАБОТЫ)
+  /* =====================================================
+     ПОРТФОЛИО
   ===================================================== */
   const pPhotos = [
-    { i: "img/work-1.jpg", t: "Кухня с черной духовкой и черной техникой", c: "kitchen", g: "wide" },
-    { i: "img/work-2.jpg", t: "ТВ-зона с деревянными рейками",        c: "living",  g: "standard" },
-    { i: "img/work-3.jpg", t: "Серый шкаф под бетон в прихожую",      c: "closet",  g: "standard" },
-    { i: "img/work-4.jpg", t: "Большой бежевый шкаф во всю стену с нишей под ТВ",        c: "living",  g: "standard" },
-    { i: "img/work-5.jpg", t: "Кухня со встроенным холодильником",          c: "kitchen", g: "wide" },
-    { i: "img/work-6.jpg", t: "Классический шкаф со стеклом",          c: "closet",  g: "tall" },
-    { i: "img/work-7.jpg", t: "Светлый шкаф для спальни",              c: "closet",  g: "standard" },
-    { i: "img/work-8.jpg", t: "Угловой шкаф с открытыми полками",      c: "closet",  g: "standard" }
+    { i: "img/work-1.webp", t: "Кухня с черной духовкой и черной техникой", c: "kitchen", g: "wide" },
+    { i: "img/work-2.webp", t: "ТВ-зона с деревянными рейками",        c: "living",  g: "standard" },
+    { i: "img/work-3.webp", t: "Серый шкаф под бетон в прихожую",      c: "closet",  g: "standard" },
+    { i: "img/work-4.webp", t: "Большой бежевый шкаф во всю стену с нишей под ТВ",        c: "living",  g: "standard" },
+    { i: "img/work-5.webp", t: "Кухня со встроенным холодильником",          c: "kitchen", g: "wide" },
+    { i: "img/work-6.webp", t: "Классический шкаф со стеклом",          c: "closet",  g: "tall" },
+    { i: "img/work-7.webp", t: "Светлый шкаф для спальни",              c: "closet",  g: "standard" },
+    { i: "img/work-8.webp", t: "Угловой шкаф с открытыми полками",      c: "closet",  g: "standard" }
   ];
 
   const pGrid = document.getElementById("portfolioGrid");
@@ -995,7 +1020,6 @@
         const el = document.createElement("article");
         el.className = `work ${w.g === "wide" ? "featured-lg" : w.g === "tall" ? "featured-tall" : ""}`;
         
-        // Вставляем локальную картинку (без сложных ссылок Unsplash)
         el.innerHTML = `
           <img src="${w.i}" alt="${w.t}" loading="${idx < 4 ? "eager" : "lazy"}" />
           <div class="work-overlay"></div>
@@ -1037,6 +1061,7 @@
   };
   
   initPort();
+
   /* =====================================================
      КАЛЬКУЛЯТОР + УМНЫЙ ЧЕРТЁЖ
   ===================================================== */
