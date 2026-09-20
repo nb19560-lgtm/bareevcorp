@@ -946,7 +946,7 @@
   /* =====================================================
     GOOGLE APPS SCRIPT 
   ===================================================== */
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwgpOUBxJf42hB_-AWeAynojbnxbq1fjbYATVsTCKCOE7KLiemMWZF_1XFV4snbyHdr7g/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxvjad0TeHb0fei8CPtvQGi70-TKKDnaRMXgo4bB6GqwBDrOvMnzW5mMpS-1VYnBvj8rQ/exec";
 
   /* =====================================================
      КАСТОМНЫЙ КУРСОР 
@@ -1184,16 +1184,20 @@
     sBtn.classList.add("loading"); 
     sBtn.disabled = true;
     
-    const formData = new FormData();
-    formData.append("name", nm.value);
-    formData.append("phone", ph.value);
-    formData.append("service", sv.value);
-    formData.append("message", ms.value);
+    // Упаковываем данные специально для Google Таблиц
+    const params = new URLSearchParams();
+    params.append("name", nm.value);
+    params.append("phone", ph.value);
+    params.append("service", sv.value);
+    params.append("message", ms.value);
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: params.toString(),
         mode: "no-cors"
       });
       
