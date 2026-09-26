@@ -9,12 +9,24 @@
   <title>BAREEV CORP. — Мебель и интерьеры</title>
 
   <link rel="canonical" href="https://bareevcorp.ru/" />
+  
+  <!-- ============ OPEN GRAPH (Для мессенджеров) ============ -->
   <meta property="og:url" content="https://bareevcorp.ru/" />
   <meta property="og:title" content="BAREEV CORP. — Мебель на заказ в Астрахани" />
   <meta property="og:description" content="Кухни, шкафы, гардеробные, ТВ-зоны. Индивидуальный проект, точный лазерный замер." />
   <meta property="og:image" content="https://bareevcorp.ru/img/og-cover.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
+
+  <!-- ============ TWITTER CARDS ============ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BAREEV CORP. — Мебель на заказ в Астрахани">
+  <meta name="twitter:description" content="Кухни, шкафы, гардеробные, ТВ-зоны. Индивидуальный проект.">
+  <meta name="twitter:image" content="https://bareevcorp.ru/img/og-cover.jpg">
+
+  <!-- ============ ПРЕДЗАГРУЗКА ВАЖНЫХ РЕСУРСОВ ============ -->
+  <link rel="preload" href="img/video-poster.webp" as="image" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" as="style" />
 
   <!-- ============ SEO ВЕРИФИКАЦИЯ ПОИСКОВИКОВ ============ -->
   <meta name="yandex-verification" content="0f1eab25da65f6fc" />
@@ -25,7 +37,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/favicon.png" />
   <link rel="apple-touch-icon" href="img/favicon.png" />
 
-  <!-- ============ МИКРОРАЗМЕТКА SCHEMA.ORG (LocalBusiness + AggregateRating) ============ -->
+  <!-- ============ МИКРОРАЗМЕТКА SCHEMA.ORG ============ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -366,6 +378,24 @@
     }
   </style>
 
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(112801992, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/112801992" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
 </head>
 
 <body>
@@ -423,6 +453,11 @@
             <div class="hero-actions">
               <a class="button button-accent" href="#request">Начать проект</a>
               <a class="button" href="#portfolio">Смотреть работы</a>
+            </div>
+            <!-- СТРОКА ДОВЕРИЯ (SOCIAL PROOF) -->
+            <div style="margin-top: 24px; font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span style="color: var(--accent); letter-spacing: 2px;">★★★★★</span>
+              <span>Рейтинг 5.0 · Работаем по Астрахани и области</span>
             </div>
           </div>
         </div>
@@ -764,6 +799,14 @@
     </div>
   </footer>
 
+  <!-- COOKIE БАННЕР -->
+  <div id="cookieBanner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--bg-surface); border-top:1px solid var(--border-light); padding:16px 24px; box-shadow: 0 -10px 40px rgba(0,0,0,0.05); justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; transition: opacity 0.3s ease;">
+    <p style="margin:0; font-size:12px; color:var(--text-muted); max-width:800px; line-height:1.5;">
+      Мы используем файлы cookie и сервис Яндекс.Метрика для анализа аудитории и улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="/privacy.html" style="color:var(--accent); text-decoration:underline;">Политикой конфиденциальности</a>.
+    </p>
+    <button id="cookieAcceptBtn" class="button button-accent" style="min-height: 40px; padding: 0 24px; font-size: 10px;">Я согласен</button>
+  </div>
+
   <a href="tel:+79627534403" class="mobile-call-fab" id="mobileCallFab" aria-label="Позвонить">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     <span class="call-fab-pulse"></span>
@@ -781,7 +824,6 @@
        ЗАЩИТА: Блокировка правой кнопки мыши и DevTools (мягкая версия)
     ===================================================== */
     document.addEventListener('contextmenu', (e) => {
-      // Разрешаем контекстное меню на ссылках и в блоке телефонов — чтобы люди могли копировать номер
       if (e.target.closest('a') || e.target.closest('.phones-group') || e.target.closest('input') || e.target.closest('textarea')) return;
       e.preventDefault();
     });
@@ -796,43 +838,42 @@
       if ((e.ctrlKey || e.metaKey) && e.key.toUpperCase() === 'U') { e.preventDefault(); return false; }
     });
 
-/* =====================================================
-   1. КУРСОР
-===================================================== */
-const cDot = document.getElementById("cursorDot");
-if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
-  let mX = -100, mY = -100, cX = -100, cY = -100, cursorRAF = null;
-  
-  function animCursor() {
-    cX += (mX - cX) * 0.2; cY += (mY - cY) * 0.2;
-    cDot.style.left = cX + "px"; cDot.style.top = cY + "px";
-    if (Math.abs(mX - cX) > 0.5 || Math.abs(mY - cY) > 0.5) cursorRAF = requestAnimationFrame(animCursor);
-    else cursorRAF = null;
-  }
-  
-  document.addEventListener("mousemove", e => {
-    mX = e.clientX; mY = e.clientY; document.body.classList.add("cursor-active");
-    if (!cursorRAF) cursorRAF = requestAnimationFrame(animCursor);
-  });
-  
-  const interact = "a, button, input, select, textarea, .work, .review-card, .service-card, .material-option";
-  document.addEventListener("mouseover", e => { if (e.target.closest(interact)) document.body.classList.add("cursor-hover"); });
-  document.addEventListener("mouseout", e => { if (e.target.closest(interact)) document.body.classList.remove("cursor-hover"); });
-  document.addEventListener("mouseleave", () => document.body.classList.remove("cursor-active"));
+    /* =====================================================
+       1. КУРСОР
+    ===================================================== */
+    const cDot = document.getElementById("cursorDot");
+    if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
+      let mX = -100, mY = -100, cX = -100, cY = -100, cursorRAF = null;
+      
+      function animCursor() {
+        cX += (mX - cX) * 0.2; cY += (mY - cY) * 0.2;
+        cDot.style.left = cX + "px"; cDot.style.top = cY + "px";
+        if (Math.abs(mX - cX) > 0.5 || Math.abs(mY - cY) > 0.5) cursorRAF = requestAnimationFrame(animCursor);
+        else cursorRAF = null;
+      }
+      
+      document.addEventListener("mousemove", e => {
+        mX = e.clientX; mY = e.clientY; document.body.classList.add("cursor-active");
+        if (!cursorRAF) cursorRAF = requestAnimationFrame(animCursor);
+      });
+      
+      const interact = "a, button, input, select, textarea, .work, .review-card, .service-card, .material-option";
+      document.addEventListener("mouseover", e => { if (e.target.closest(interact)) document.body.classList.add("cursor-hover"); });
+      document.addEventListener("mouseout", e => { if (e.target.closest(interact)) document.body.classList.remove("cursor-hover"); });
+      document.addEventListener("mouseleave", () => document.body.classList.remove("cursor-active"));
 
-  // ✅ ФИКС: курсор не зависает на карте (iframe)
-  const mapContainer = document.querySelector(".map-frame-container");
-  if (mapContainer) {
-    mapContainer.addEventListener("mouseenter", () => {
-      document.body.classList.remove("cursor-active", "cursor-hover");
-      cDot.style.opacity = "0";
-    });
-    mapContainer.addEventListener("mouseleave", () => {
-      document.body.classList.add("cursor-active");
-      cDot.style.opacity = "1";
-    });
-  }
-}
+      const mapContainer = document.querySelector(".map-frame-container");
+      if (mapContainer) {
+        mapContainer.addEventListener("mouseenter", () => {
+          document.body.classList.remove("cursor-active", "cursor-hover");
+          cDot.style.opacity = "0";
+        });
+        mapContainer.addEventListener("mouseleave", () => {
+          document.body.classList.add("cursor-active");
+          cDot.style.opacity = "1";
+        });
+      }
+    }
 
     /* =====================================================
        2. ПОРТФОЛИО
@@ -896,7 +937,7 @@ if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
     initPort();
 
     /* =====================================================
-       3. КАЛЬКУЛЯТОР (с адаптацией высоты под ТВ-зону)
+       3. КАЛЬКУЛЯТОР
     ===================================================== */
     const tBtns = document.querySelectorAll(".calc-type-btn");
     const wSl = document.getElementById("widthSlider"), hSl = document.getElementById("heightSlider");
@@ -969,7 +1010,6 @@ if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
       aName = b.querySelector(".calc-type-name").textContent;
       aType = b.dataset.type;
 
-      // Адаптируем высоту слайдера под тип мебели
       if (aType === "tv") {
         hSl.value = 1.8;
       } else if (parseFloat(hSl.value) < 2.0) {
@@ -980,7 +1020,6 @@ if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
 
     wSl.oninput = updateCalc; hSl.oninput = updateCalc; mOpts.forEach(o => o.onchange = updateCalc); updateCalc();
 
-    // Кнопка «Перенести в заявку» с автофокусом и анимацией
     document.getElementById("sendEstimateBtn").onclick = () => {
       const formMsg = document.getElementById("formMessage");
       const formName = document.getElementById("formName");
@@ -1001,7 +1040,7 @@ if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
     };
 
     /* =====================================================
-       4. ОТЗЫВЫ (со свайпами и защитой от системного жеста Safari)
+       4. ОТЗЫВЫ 
     ===================================================== */
     const rData = [
       { n: "Алексей М.", d: "Встроенная кухня", q: "Идеально выдержали зазоры, установили аккуратно. Blum работает превосходно.", s: "Telegram", i: "А" },
@@ -1028,7 +1067,6 @@ if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
     window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(updateRev, 150); });
     window.addEventListener("load", updateRev); updateRev();
 
-    // Свайпы для отзывов на мобильных
     let touchStartX = 0;
     rTrack.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].clientX, { passive: true });
     rTrack.addEventListener('touchend', e => {
@@ -1081,7 +1119,7 @@ if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
     phInp.addEventListener('input', onPhoneInput, false); phInp.addEventListener('keydown', onPhoneKeyDown, false);
 
     /* =====================================================
-       8. ФОРМА ОТПРАВКИ (с честной обработкой ошибок)
+       8. ФОРМА ОТПРАВКИ 
     ===================================================== */
     const rForm = document.getElementById("requestForm"), sBtn = document.getElementById("formSubmitBtn");
     document.querySelectorAll(".form-input").forEach(inp => inp.addEventListener("input", () => { inp.classList.remove("error"); inp.closest(".form-group")?.classList.remove("has-error"); }));
@@ -1111,17 +1149,12 @@ if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
           mode: "no-cors" 
         });
         
-        // Успех — показываем сообщение только при успешной отправке
         rForm.style.display = "none"; 
         document.getElementById("formSuccess").classList.add("active");
         
-        // Отправка цели в Яндекс.Метрику (когда счётчик будет установлен)
+        // Яндекс Метрика - срабатывание цели (лид)
         if (typeof ym !== 'undefined') {
           ym(112801992, 'reachGoal', 'lead');
-        }
-        // Отправка цели в Google Analytics (если подключён)
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', { event_category: 'lead' });
         }
         
       } catch (err) { 
@@ -1144,6 +1177,22 @@ if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
         b.addEventListener("mouseleave", () => { gsap.to(b, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.5)" }); });
       });
     }
+
+    /* =====================================================
+       10. COOKIE БАННЕР ЛОГИКА
+    ===================================================== */
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieAcceptBtn = document.getElementById('cookieAcceptBtn');
+
+    if (!localStorage.getItem('cookies_accepted')) {
+      cookieBanner.style.display = 'flex';
+    }
+
+    cookieAcceptBtn.onclick = () => {
+      localStorage.setItem('cookies_accepted', 'true');
+      cookieBanner.style.opacity = '0';
+      setTimeout(() => cookieBanner.style.display = 'none', 300);
+    };
 
   }); // Конец DOMContentLoaded
   </script>
