@@ -796,27 +796,43 @@
       if ((e.ctrlKey || e.metaKey) && e.key.toUpperCase() === 'U') { e.preventDefault(); return false; }
     });
 
-    /* =====================================================
-       1. КУРСОР
-    ===================================================== */
-    const cDot = document.getElementById("cursorDot");
-    if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
-      let mX = -100, mY = -100, cX = -100, cY = -100, cursorRAF = null;
-      function animCursor() {
-        cX += (mX - cX) * 0.2; cY += (mY - cY) * 0.2;
-        cDot.style.left = cX + "px"; cDot.style.top = cY + "px";
-        if (Math.abs(mX - cX) > 0.5 || Math.abs(mY - cY) > 0.5) cursorRAF = requestAnimationFrame(animCursor);
-        else cursorRAF = null;
-      }
-      document.addEventListener("mousemove", e => {
-        mX = e.clientX; mY = e.clientY; document.body.classList.add("cursor-active");
-        if (!cursorRAF) cursorRAF = requestAnimationFrame(animCursor);
-      });
-      const interact = "a, button, input, select, textarea, .work, .review-card, .service-card, .material-option";
-      document.addEventListener("mouseover", e => { if (e.target.closest(interact)) document.body.classList.add("cursor-hover"); });
-      document.addEventListener("mouseout", e => { if (e.target.closest(interact)) document.body.classList.remove("cursor-hover"); });
-      document.addEventListener("mouseleave", () => document.body.classList.remove("cursor-active"));
-    }
+/* =====================================================
+   1. КУРСОР
+===================================================== */
+const cDot = document.getElementById("cursorDot");
+if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
+  let mX = -100, mY = -100, cX = -100, cY = -100, cursorRAF = null;
+  
+  function animCursor() {
+    cX += (mX - cX) * 0.2; cY += (mY - cY) * 0.2;
+    cDot.style.left = cX + "px"; cDot.style.top = cY + "px";
+    if (Math.abs(mX - cX) > 0.5 || Math.abs(mY - cY) > 0.5) cursorRAF = requestAnimationFrame(animCursor);
+    else cursorRAF = null;
+  }
+  
+  document.addEventListener("mousemove", e => {
+    mX = e.clientX; mY = e.clientY; document.body.classList.add("cursor-active");
+    if (!cursorRAF) cursorRAF = requestAnimationFrame(animCursor);
+  });
+  
+  const interact = "a, button, input, select, textarea, .work, .review-card, .service-card, .material-option";
+  document.addEventListener("mouseover", e => { if (e.target.closest(interact)) document.body.classList.add("cursor-hover"); });
+  document.addEventListener("mouseout", e => { if (e.target.closest(interact)) document.body.classList.remove("cursor-hover"); });
+  document.addEventListener("mouseleave", () => document.body.classList.remove("cursor-active"));
+
+  // ✅ ФИКС: курсор не зависает на карте (iframe)
+  const mapContainer = document.querySelector(".map-frame-container");
+  if (mapContainer) {
+    mapContainer.addEventListener("mouseenter", () => {
+      document.body.classList.remove("cursor-active", "cursor-hover");
+      cDot.style.opacity = "0";
+    });
+    mapContainer.addEventListener("mouseleave", () => {
+      document.body.classList.add("cursor-active");
+      cDot.style.opacity = "1";
+    });
+  }
+}
 
     /* =====================================================
        2. ПОРТФОЛИО
