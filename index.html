@@ -763,6 +763,39 @@
 
   const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxoZQfmC7yvUKaM57Dw98YiAjFCU3EI_wSUSdfqMllObElXx6D8burkwbKjrfJBPWI0KA/exec";
 
+      /* =====================================================
+     ЗАЩИТА: Блокировка правой кнопки мыши и DevTools
+  ===================================================== */
+  // 1. Блокируем контекстное меню (правую кнопку)
+  document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+  });
+
+  // 2. Блокируем F12 и горячие клавиши разработчика
+  document.addEventListener('keydown', (e) => {
+    // Блокировка F12
+    if (e.key === 'F12' || e.keyCode === 123) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Блокировка Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (Windows/Linux)
+    // и Cmd+Option+I, Cmd+Option+J, Cmd+Option+C (Mac)
+    if (
+      (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+      (e.metaKey && e.altKey && ['I', 'J', 'C'].includes(e.key.toUpperCase()))
+    ) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Блокировка Ctrl+U / Cmd+U (просмотр исходного кода)
+    if ((e.ctrlKey || e.metaKey) && e.key.toUpperCase() === 'U') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
   /* =====================================================
      1. КУРСОР
   ===================================================== */
