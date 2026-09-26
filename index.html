@@ -962,6 +962,34 @@
   document.querySelectorAll(".mobile-link").forEach(l => l.onclick = () => { mMenu.classList.remove("open"); mTog.classList.remove("open"); mTog.setAttribute("aria-expanded", "false"); mMenu.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; });
   window.addEventListener("scroll", () => { const y = window.scrollY; nWrap.classList.toggle("scrolled", y > 50); if (fab) fab.classList.toggle("visible", y > 300); }, { passive: true });
 
+      // =====================================================
+  // ДОБАВЛЕНИЕ СВАЙПОВ ДЛЯ ОТЗЫВОВ НА МОБИЛЬНЫХ
+  // =====================================================
+  let touchStartX = 0;
+
+  rTrack.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  rTrack.addEventListener('touchend', e => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diffX = touchStartX - touchEndX;
+    const swipeThreshold = 50; // Чувствительность свайпа (в пикселях)
+
+    if (Math.abs(diffX) > swipeThreshold) {
+      const pv = window.innerWidth <= 992 ? 1 : (window.innerWidth <= 1200 ? 2 : 3);
+      const max = Math.max(1, rData.length - pv + 1);
+      
+      if (diffX > 0 && cRev < max - 1) {
+        cRev++; // Свайп влево -> следующий отзыв
+        updateRev();
+      } else if (diffX < 0 && cRev > 0) {
+        cRev--; // Свайп вправо -> предыдущий отзыв
+        updateRev();
+      }
+    }
+  }, { passive: true });
+
   /* =====================================================
      6. КАРТЫ (LAZY LOAD)
   ===================================================== */
