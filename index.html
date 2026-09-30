@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bareev Corp. Custom Solutions — авторская встроенная и корпусная мебель по индивидуальным проектам в Астрахани." />
+  <meta name="theme-color" content="#F9F8F5" />
+
+  <title>BAREEV CORP. — Мебель и интерьеры</title>
+
+  <link rel="canonical" href="https://bareevcorp.ru/" />
+  
+  <!-- ============ OPEN GRAPH (Для мессенджеров) ============ -->
+  <meta property="og:url" content="https://bareevcorp.ru/" />
+  <meta property="og:title" content="BAREEV CORP. — Мебель на заказ в Астрахани" />
+  <meta property="og:description" content="Кухни, шкафы, гардеробные, ТВ-зоны. Индивидуальный проект, точный лазерный замер." />
+  <meta property="og:image" content="https://bareevcorp.ru/img/og-cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <!-- ============ TWITTER CARDS ============ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BAREEV CORP. — Мебель на заказ в Астрахани">
+  <meta name="twitter:description" content="Кухни, шкафы, гардеробные, ТВ-зоны. Индивидуальный проект.">
+  <meta name="twitter:image" content="https://bareevcorp.ru/img/og-cover.jpg">
+
+  <!-- ============ ПРЕДЗАГРУЗКА ВАЖНЫХ РЕСУРСОВ ============ -->
+  <link rel="preload" href="img/video-poster.webp" as="image" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" as="style" />
+
+  <!-- ============ SEO ВЕРИФИКАЦИЯ ПОИСКОВИКОВ ============ -->
+  <meta name="yandex-verification" content="0f1eab25da65f6fc" />
+  <meta name="google-site-verification" content="WVoSKqPROW1hvdQOdI_mvSx-ad58A2XYiudFe3xBMg8" />
+
+  <!-- ============ ИКОНКИ ============ -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon.png" />
+  <link rel="apple-touch-icon" href="img/favicon.png" />
+
+  <!-- ============ МИКРОРАЗМЕТКА SCHEMA.ORG ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "BAREEV CORP. — Мебель и интерьеры",
+    "image": "https://bareevcorp.ru/img/og-cover.jpg",
+    "@id": "https://bareevcorp.ru/#localbusiness",
+    "url": "https://bareevcorp.ru/",
+    "telephone": "+79627534403",
+    "priceRange": "$$$",
+    "description": "Авторская встроенная и корпусная мебель по индивидуальным проектам в Астрахани. Кухни, шкафы, гардеробные, ТВ-зоны.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1-й проезд Рождественского, 11А/1",
+      "addressLocality": "Астрахань",
+      "postalCode": "414000",
+      "addressCountry": "RU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.323674,
+      "longitude": 48.046313
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday", "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "27",
+      "bestRating": "5"
+    },
+    "sameAs": [
+      "https://t.me/nebareev"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <style>
+    :root {
+      --bg-main: #F9F8F5;
+      --bg-surface: #FFFFFF;
+      --accent: #22211F;
+      --accent-hover: #4A4845;
+      --accent-glow: rgba(34, 33, 31, 0.05);
+      --text-main: #22211F;
+      --text-muted: #85827D;
+      --danger: #d63447;
+      --border: rgba(34, 33, 31, 0.15);
+      --border-light: rgba(34, 33, 31, 0.08);
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', Arial, sans-serif;
+      --radius-lg: 16px;
+      --radius-md: 8px;
+      --radius-sm: 4px;
+      --transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg-main); scroll-padding-top: 110px; }
+    body { min-width: 320px; overflow-x: hidden; color: var(--text-main); background: var(--bg-main); font-family: var(--font-body); font-weight: 300; line-height: 1.6; }
+
+    a { color: inherit; text-decoration: none; transition: var(--transition); }
+    button { font: inherit; background: none; border: none; cursor: pointer; transition: var(--transition); }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
+    
+    .container { width: min(calc(100% - 40px), 1320px); margin: 0 auto; }
+
+    .cursor-dot { position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); opacity: 0; transition: width 0.3s, height 0.3s, background-color 0.3s, opacity 0.3s; }
+    .cursor-active .cursor-dot { opacity: 1; }
+    .cursor-hover .cursor-dot { width: 48px; height: 48px; background: var(--accent-glow); border: 1px solid var(--accent); }
+    @media (hover: none), (max-width: 992px) { .cursor-dot { display: none !important; } }
+
+    .nav-wrapper { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; transition: background 0.4s, border 0.4s, padding 0.4s; padding: 24px 0; border-bottom: 1px solid transparent; }
+    .nav-wrapper.scrolled { background: rgba(249, 248, 245, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-light); padding: 14px 0; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 40px; }
+    .brand { display: flex; flex-direction: column; gap: 2px; line-height: 1; }
+    .brand-main { font-family: var(--font-heading); font-size: 24px; font-weight: 500; letter-spacing: 0.02em; color: var(--accent); }
+    .brand-sub { font-size: 8px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); }
+    .nav-links { display: flex; align-items: center; gap: 32px; color: var(--text-main); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+    .nav-links a { opacity: 0.6; }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; }
+    .nav-right-actions { display: flex; align-items: center; gap: 16px; }
+    .nav-contact { padding: 12px 24px; border: 1px solid var(--accent); color: var(--accent); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; }
+    .nav-contact:hover { background: var(--accent); color: var(--bg-main); }
+    .menu-toggle { display: none; flex-direction: column; justify-content: space-between; width: 28px; height: 14px; z-index: 110; }
+    .menu-toggle span { display: block; width: 100%; height: 1.5px; background: var(--accent); transition: transform 0.3s ease, opacity 0.3s ease; }
+    .menu-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    .mobile-menu-overlay { position: fixed; inset: 0; background: var(--bg-main); z-index: 105; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 32px; opacity: 0; pointer-events: none; transition: opacity 0.4s; }
+    .mobile-menu-overlay.open { opacity: 1; pointer-events: auto; }
+    .mobile-menu-links { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+    .mobile-menu-links a { font-family: var(--font-heading); font-size: 32px; color: var(--accent); }
+
+    .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; position: relative; }
+    .hero-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+    .hero-card { background: transparent; padding: 0; border: none; }
+    .hero-eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-muted); margin-bottom: 24px; display: block; }
+    .hero-title { font-family: var(--font-heading); font-size: clamp(42px, 6vw, 84px); line-height: 1.05; font-weight: 400; color: var(--accent); margin-bottom: 32px; }
+    .hero-title i { font-style: italic; color: var(--text-muted); }
+    .hero-bottom { display: flex; flex-direction: column; gap: 32px; }
+    .hero-description { font-size: 17px; line-height: 1.6; color: var(--text-muted); max-width: 480px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; }
+
+    .hero-media { position: relative; aspect-ratio: 4/5; width: 100%; overflow: hidden; background: var(--border-light); border-radius: var(--radius-lg); }
+    .hero-video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.95) contrast(1.05); transition: transform 0.8s ease; }
+    .hero-media:hover .hero-video { transform: scale(1.03); }
+.media-overlay { position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.2) 100%); }
+    .media-caption { position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 4; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .media-badge { color: #fff; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+    .live-dot { width: 6px; height: 6px; border-radius: 50%; background: #fff; display: inline-block; animation: pulseDot 1.8s infinite; }
+    @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .media-caption p { color: #fff; font-size: 11px; opacity: 0.8; }
+
+    .button { display: inline-flex; justify-content: center; align-items: center; padding: 0 32px; min-height: 52px; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid var(--border); color: var(--accent); background: transparent; border-radius: var(--radius-sm); transition: var(--transition); }
+    .button:hover { border-color: var(--accent); }
+    .button-accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .button-accent:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
+
+    .brand-marquee { position: relative; overflow: hidden; width: 100%; padding: 24px 0; background: transparent; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); display: flex; user-select: none; }
+    .marquee-track { display: flex; width: max-content; animation: scrollMarquee 40s linear infinite; }
+    .marquee-list { display: flex; align-items: center; flex-wrap: nowrap; gap: 40px; padding-right: 40px; }
+    .marquee-list span { color: var(--text-muted); font-size: 13px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; display: flex; align-items: center; }
+    .marquee-dot { width: 5px; height: 5px; background: var(--border); border-radius: 50%; margin-left: 40px; display: inline-block; }
+    @keyframes scrollMarquee { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+
+    section { padding: 120px 0; border-bottom: 1px solid var(--border-light); }
+    .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 20px; display: block; }
+    .section-heading { font-family: var(--font-heading); font-size: clamp(36px, 5vw, 64px); font-weight: 400; color: var(--accent); line-height: 1.1; max-width: 800px; margin-bottom: 60px; }
+    .section-heading span { color: var(--text-muted); font-style: italic; }
+
+    .services-top { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-bottom: 60px; }
+    .services-note { color: var(--text-muted); font-size: 16px; line-height: 1.7; max-width: 400px; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .service-card { padding-top: 24px; border-top: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; }
+    .service-card-top { display: flex; justify-content: space-between; align-items: center; }
+    .service-number { font-family: var(--font-heading); font-size: 24px; color: var(--text-muted); font-style: italic; }
+    .service-icon { width: 20px; height: 20px; stroke: var(--text-muted); stroke-width: 1.5; fill: none; }
+    .service-card h3 { font-family: var(--font-heading); font-size: 28px; font-weight: 400; margin: 20px 0 16px; color: var(--accent); }
+    .service-card p { font-size: 15px; color: var(--text-muted); }
+
+    .portfolio-header { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .portfolio-hint { color: var(--text-muted); font-size: 15px; line-height: 1.7; max-width: 400px; }
+    .portfolio-filters { display: flex; gap: 32px; margin-bottom: 48px; border-bottom: 1px solid var(--border-light); padding-bottom: 16px; overflow-x: auto; }
+    .filter-btn { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); padding-bottom: 8px; border-bottom: 1px solid transparent; white-space: nowrap; }
+    .filter-btn:hover { color: var(--accent); }
+    .filter-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 80px 40px; transition: opacity 0.4s; }
+    .work { display: block; cursor: pointer; }
+    .work-img-wrap { overflow: hidden; aspect-ratio: 4/3; margin-bottom: 20px; background: var(--border-light); border-radius: var(--radius-sm); }
+    .work img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; filter: brightness(0.95); }
+    .work:hover img { transform: scale(1.03); }
+    .work-title { font-family: var(--font-heading); font-size: 26px; font-weight: 400; color: var(--accent); margin-bottom: 8px; }
+    .work-category { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between; align-items: center; }
+
+    .calc-card { background: var(--bg-surface); padding: 60px; border: 1px solid var(--border-light); border-radius: var(--radius-lg); }
+    .calc-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: flex-start; }
+    .calc-steps { display: flex; flex-direction: column; gap: 60px; }
+    .calc-group-title { font-family: var(--font-heading); font-size: 28px; color: var(--accent); margin-bottom: 32px; border-bottom: 1px solid var(--border-light); padding-bottom: 12px; }
+    
+    .calc-types { display: flex; flex-direction: column; gap: 8px; }
+    .calc-type-btn { padding: 18px 24px; border: 1px solid var(--border); text-align: left; width: 100%; color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; border-radius: var(--radius-sm); }
+    .calc-type-btn.active { border-color: var(--accent); color: var(--accent); background: var(--bg-main); }
+
+    .slider-wrap { margin-bottom: 24px; }
+    .slider-header { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+    .slider-header strong { color: var(--accent); font-weight: 500; font-size: 16px; }
+    
+    .stepper-control { display: flex; align-items: center; gap: 16px; }
+    .stepper-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg-main); color: var(--accent); font-size: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; user-select: none; transition: background-color 0.2s, color 0.2s, transform 0.15s; }
+    .stepper-btn:active { background: var(--accent); color: #fff; transform: scale(0.92); }
+    
+    .calc-range { width: 100%; height: 2px; background: var(--border); appearance: none; -webkit-appearance: none; outline: none; }
+    .calc-range::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); cursor: pointer; transition: transform 0.2s; }
+    .calc-range::-webkit-slider-thumb:hover { transform: scale(1.3); }
+
+    .plan-visual { margin-top: 32px; padding: 40px; background: var(--bg-main); border: 1px solid var(--border-light); border-radius: var(--radius-md); display: flex; justify-content: center; }
+    .plan-svg { width: 100%; max-width: 400px; height: auto; display: block; }
+    .plan-shape { fill: rgba(34, 33, 31, 0.03); stroke: var(--accent); stroke-width: 1.5; }
+    .plan-line { stroke: var(--accent); stroke-width: 0.5; opacity: 0.6; }
+    .plan-dimension { stroke: var(--text-muted); stroke-width: 1; }
+    .plan-dim-text { fill: var(--text-muted); font-family: var(--font-body); font-size: 10px; font-weight: 500; }
+
+    .calc-materials { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .material-option { padding: 20px; border: 1px solid var(--border); cursor: pointer; transition: var(--transition); border-radius: var(--radius-sm); display: block; }
+    .material-option input { display: none; }
+    .material-option-title { display: block; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+    .material-option-desc { display: block; font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    .material-option:has(input:checked) { border-color: var(--accent); background: var(--bg-main); }
+    .material-option:has(input:checked) .material-option-title { color: var(--accent); }
+
+    .calc-result-sticky { position: sticky; top: 120px; background: var(--bg-main); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--border-light); display: flex; flex-direction: column; gap: 32px; }
+    .calc-price-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+    .calc-price-range { font-family: var(--font-heading); font-size: clamp(32px, 3vw, 42px); color: var(--accent); margin-top: 12px; line-height: 1.1; }
+    .calc-summary-list { display: flex; flex-direction: column; gap: 12px; font-size: 13px; color: var(--text-muted); }
+    .calc-summary-item { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px; }
+    .calc-summary-item span:last-child { font-weight: 500; color: var(--accent); text-align: right; }
+    .calc-disclaimer { margin-top: 16px; font-size: 11px; color: var(--text-muted); text-align: center; line-height: 1.4; }
+
+    .reviews-header { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .reviews-note { color: var(--text-muted); font-size: 15px; line-height: 1.7; max-width: 400px; }
+    .reviews-track { display: flex; gap: 24px; transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); touch-action: pan-y; }
+    .review-card { flex: 0 0 calc((100% - 48px) / 3); background: var(--bg-surface); padding: 40px; border: 1px solid var(--border-light); border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between; }
+    .review-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    .review-stars { color: var(--accent); font-size: 12px; letter-spacing: 2px; }
+    .review-source { font-size: 10px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .review-quote { font-family: var(--font-heading); font-size: 20px; font-style: italic; color: var(--accent); margin-bottom: 24px; line-height: 1.4; }
+    .review-author { display: flex; align-items: center; gap: 16px; border-top: 1px solid var(--border-light); padding-top: 24px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-main); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--accent); font-weight: 500; font-size: 13px; }
+    .review-name { font-size: 13px; font-weight: 500; color: var(--accent); display: block; }
+    .review-detail { font-size: 12px; color: var(--text-muted); }
+    
+    .reviews-nav { display: flex; gap: 12px; margin-top: 40px; justify-content: center; align-items: center; }
+    .reviews-nav-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--accent); }
+    .reviews-nav-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--bg-surface); }
+    .reviews-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+    .reviews-dots { display: flex; gap: 8px; }
+    .reviews-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); cursor: pointer; transition: var(--transition); }
+    .reviews-dot.active { background: var(--accent); width: 16px; border-radius: 10px; }
+
+    .approach-card { background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 60px; }
+    .approach-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+    .approach-copy { font-size: 16px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; }
+    .facts { display: flex; flex-direction: column; gap: 16px; }
+    .fact { display: flex; align-items: center; gap: 20px; padding: 20px; background: var(--bg-main); border: 1px solid var(--border-light); border-radius: var(--radius-sm); }
+    .fact-number { font-family: var(--font-heading); font-size: 20px; font-style: italic; color: var(--accent); }
+    .fact p { font-size: 14px; color: var(--accent); }
+
+    .contacts-card { background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 60px; }
+    .contacts-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+    .contacts-description { font-size: 16px; color: var(--text-muted); margin: 24px 0 40px; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .qr-card { padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-main); text-align: center; }
+    .qr-card img { width: 100%; max-width: 180px; aspect-ratio: 1; margin: 0 auto 20px; padding: 8px; background: #ffffff; border: 1px solid var(--border-light); }
+    .qr-card p { color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .qr-card span { display: block; margin-top: 8px; color: var(--accent); font-weight: 500; }
+
+    .map-wrapper { margin-top: 60px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-light); }
+    .map-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 24px 32px; background: var(--bg-main); border-bottom: 1px solid var(--border-light); }
+    .map-badge { font-size: 11px; font-weight: 500; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.1em; }
+    .map-address { color: var(--accent); font-size: 16px; margin-top: 4px; }
+    .map-frame-container { position: relative; width: 100%; height: 400px; background: var(--border-light); }
+    .map-frame { width: 100%; height: 100%; border: 0; filter: grayscale(1); }
+    .map-placeholder { position: absolute; inset: 0; background: var(--bg-surface); display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: opacity 0.5s; border: 1px solid var(--border-light); }
+    .map-placeholder.hidden { opacity: 0; pointer-events: none; }
+    .map-placeholder p { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 16px; }
+
+    .request-card { background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 60px; }
+    .request-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start; }
+    .request-description { font-size: 16px; color: var(--text-muted); margin: 24px 0 40px; }
+    .request-benefits { display: flex; flex-direction: column; gap: 16px; }
+    .request-benefit { display: flex; align-items: flex-start; gap: 16px; padding: 18px 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); background: var(--bg-main); }
+    .benefit-icon { font-size: 18px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: 50%; }
+    .benefit-icon {
+      flex: 0 0 36px;
+      line-height: 1;
+      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+      font-size: 18px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .request-benefit strong { display: block; color: var(--accent); font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+    .request-benefit p { color: var(--text-muted); font-size: 13px; }
+
+    .request-form { display: flex; flex-direction: column; gap: 24px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; position: relative; }
+    .form-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+    .form-optional { text-transform: none; opacity: 0.7; }
+    .form-input { width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(--border); background: transparent; color: var(--accent); font-family: var(--font-body); font-size: 16px; outline: none; transition: border-color 0.3s, background-color 0.5s ease; resize: vertical; }
+    .form-input::placeholder { color: #cccaca; }
+    .form-input:focus { border-bottom-color: var(--accent); }
+    .form-input.error { border-bottom-color: var(--danger); }
+    .form-input.highlight { background-color: rgba(34, 33, 31, 0.05); }
+    .form-error { font-size: 11px; color: var(--danger); position: absolute; bottom: -20px; left: 0; display: none; }
+    .form-group.has-error .form-error { display: block; }
+
+    .form-agreement { font-size: 11px; color: var(--text-muted); line-height: 1.5; margin-top: -8px; }
+    .form-agreement a { text-decoration: underline; color: var(--accent); }
+    .form-agreement a:hover { opacity: 0.7; }
+    
+    .form-submit.loading .submit-text { opacity: 0; }
+    .form-submit.loading .submit-loader { display: block; }
+    .submit-loader { display: none; position: absolute; width: 16px; height: 16px; border: 1px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .form-success { display: none; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 40px 0; }
+    .form-success.active { display: flex; }
+    .form-success h3 { font-family: var(--font-heading); font-size: 32px; color: var(--accent); }
+
+    .mobile-call-fab { display: none; position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: #ffffff; align-items: center; justify-content: center; z-index: 80; box-shadow: 0 4px 20px rgba(34,33,31,0.2); transition: opacity 0.35s, transform 0.35s; opacity: 0; transform: translateY(20px) scale(0.8); }
+    .mobile-call-fab.visible { opacity: 1; transform: translateY(0) scale(1); }
+    .call-fab-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 1px solid var(--accent); animation: fabPulse 2.5s ease-out infinite; pointer-events: none; }
+    @keyframes fabPulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.5); opacity: 0; } }
+
+    footer { padding: 40px 0; border-top: 1px solid var(--border-light); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; text-align: center; }
+
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1200px) {
+      .calc-grid { grid-template-columns: 1fr; gap: 40px; }
+      .calc-result-sticky { position: relative; top: 0; }
+      .nav-links { gap: 20px; }
+      .review-card { flex: 0 0 calc((100% - 24px) / 2); }
+      .hero-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 992px) {
+      .service-grid { grid-template-columns: 1fr; }
+      .approach-inner, .contacts-grid, .request-grid { grid-template-columns: 1fr; gap: 40px; }
+      .portfolio-grid { grid-template-columns: 1fr; gap: 40px; }
+      .calc-card, .request-card, .approach-card, .contacts-card { padding: 40px 20px; }
+      .calc-steps { gap: 40px; }
+      .review-card { flex: 0 0 100%; }
+      .nav-links, .nav-contact { display: none; }
+      .menu-toggle { display: flex; }
+      .hero { padding-top: 100px; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 80px 0; }
+      .services-top, .portfolio-header, .reviews-header { grid-template-columns: 1fr; gap: 20px; }
+      .calc-materials { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; gap: 16px; align-items: center; }
+      .mobile-call-fab { display: flex; }
+      .brand-marquee { padding: 16px 0; }
+      .marquee-list span { font-size: 11px; }
+      .map-frame-container { height: 280px; }
+    }
+  </style>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(112801992, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/112801992" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- НАВИГАЦИЯ -->
+  <header class="nav-wrapper" id="navWrapper">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-main">BAREEV CORP.</span>
+        <span class="brand-sub">CUSTOM SOLUTIONS</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Услуги</a>
+        <a href="#portfolio">Работы</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="nav-right-actions">
+        <a class="nav-contact" href="#request">Оставить заявку →</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- МОБИЛЬНОЕ МЕНЮ -->
+  <div class="mobile-menu-overlay" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu-links">
+      <a href="#services" class="mobile-link">Услуги</a>
+      <a href="#portfolio" class="mobile-link">Работы</a>
+      <a href="#calculator" class="mobile-link">Калькулятор</a>
+      <a href="#reviews" class="mobile-link">Отзывы</a>
+      <a href="#contacts" class="mobile-link">Контакты</a>
+      <a href="#request" class="mobile-link">Заявка</a>
+    </nav>
+    <a class="button button-accent mobile-link" href="#request" style="margin-top: 24px;">Оставить заявку</a>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+        <div class="hero-card reveal">
+          <span class="hero-eyebrow">Астрахань · Архитектурная мебель</span>
+
+          <h1 class="hero-title">
+            Пространство,<br><i>созданное</i><br>под вас.
+          </h1>
+
+          <div class="hero-bottom">
+            <p class="hero-description">Bareev Corp. — проектирование встроенной и корпусной мебели. Мы объединяем чистые линии, тактильные материалы и инженерную точность.</p>
+            <div class="hero-actions">
+              <a class="button button-accent" href="#request">Начать проект</a>
+              <a class="button" href="#portfolio">Смотреть работы</a>
+            </div>
+            <!-- СТРОКА ДОВЕРИЯ (SOCIAL PROOF) -->
+            <div style="margin-top: 24px; font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span style="color: var(--accent); letter-spacing: 2px;">★★★★★</span>
+              <span>Рейтинг 5.0 · Работаем по Астрахани и области</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <video
+            class="hero-video"
+            autoplay
+            loop
+            muted
+            playsinline
+            webkit-playsinline
+            preload="auto"
+            poster="img/video-poster.webp"
+            disablepictureinpicture
+            disableremoteplayback
+            tabindex="-1"
+            aria-hidden="true">
+            <source src="img/video.mp4" type="video/mp4" />
+          </video>
+          <div class="media-overlay"></div>
+          <div class="media-caption">
+            <span class="media-badge"><span class="live-dot"></span> 3D Render</span>
+            <p>Индивидуальная геометрия</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЕГУЩАЯ СТРОКА -->
+    <div class="brand-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-list">
+          <span>Кухни на заказ</span><span class="marquee-dot"></span><span>Шкафы-купе</span><span class="marquee-dot"></span><span>Гардеробные</span><span class="marquee-dot"></span><span>ТВ-зоны</span><span class="marquee-dot"></span><span>Сборка и монтаж</span><span class="marquee-dot"></span><span>Индивидуальные размеры</span><span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-list">
+          <span>Кухни на заказ</span><span class="marquee-dot"></span><span>Шкафы-купе</span><span class="marquee-dot"></span><span>Гардеробные</span><span class="marquee-dot"></span><span>ТВ-зоны</span><span class="marquee-dot"></span><span>Сборка и монтаж</span><span class="marquee-dot"></span><span>Индивидуальные размеры</span><span class="marquee-dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- УСЛУГИ -->
+    <section id="services">
+      <div class="container">
+        <div class="services-top reveal">
+          <div>
+            <p class="section-label">01 / Философия</p>
+            <h2 class="section-heading">Решения, созданные <span>точно под задачу.</span></h2>
+          </div>
+          <p class="services-note">Практичный подход, внимание к текстурам и безупречная установка готовой мебели нашими инженерами.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-card-top"><span class="service-number">I</span><svg class="service-icon" viewBox="0 0 24 24"><path d="M4 19h16M4 15h16M4 11h16M4 7h16"/></svg></div>
+            <div><h3>Архитектурность</h3><p>Мебель интегрируется в геометрию стен, становясь естественным продолжением интерьера, а не чужеродным объектом.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card-top"><span class="service-number">II</span><svg class="service-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <div><h3>Материалы</h3><p>Отбираем лучшие текстуры: шпон дерева, матовая эмаль, интегрированная фурнитура скрытого монтажа.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card-top"><span class="service-number">III</span><svg class="service-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div><h3>Исполнение</h3><p>От точного лазерного замера до идеальных зазоров при монтаже. Несем ответственность за безупречный результат.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОРТФОЛИО -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="portfolio-header reveal">
+          <div>
+            <p class="section-label">02 / Избранное</p>
+            <h2 class="section-heading">Реализованные <span>проекты.</span></h2>
+          </div>
+          <p class="portfolio-hint">Каждый проект выполнен под индивидуальные параметры помещения. Нажмите, чтобы открыть во весь экран.</p>
+        </div>
+        
+        <div class="portfolio-filters reveal" id="portfolioFilters">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Все проекты</button>
+          <button class="filter-btn" data-filter="kitchen" aria-pressed="false">Кухни</button>
+          <button class="filter-btn" data-filter="living" aria-pressed="false">Гостиные</button>
+          <button class="filter-btn" data-filter="closet" aria-pressed="false">Гардеробные</button>
+        </div>
+
+        <div class="portfolio-grid reveal" id="portfolioGrid"></div>
+
+        <div id="loadMoreBox" style="text-align: center; margin-top: 60px; display: none;">
+          <button class="button" id="loadMoreBtn">Показать еще проекты ↴</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАЛЬКУЛЯТОР -->
+    <section id="calculator">
+      <div class="container">
+        <p class="section-label">03 / Инвестиции</p>
+        <h2 class="section-heading">Предварительный <span>расчет бюджета.</span></h2>
+
+        <div class="calc-card reveal">
+          <div class="calc-grid">
+            
+            <div class="calc-steps">
+              <div>
+                <h3 class="calc-group-title">1. Тип изделия</h3>
+                <div class="calc-types">
+                  <button class="calc-type-btn active" data-type="kitchen" data-base-price="35000"><span class="calc-type-name">Кухонный гарнитур</span></button>
+                  <button class="calc-type-btn" data-type="wardrobe" data-base-price="25000"><span class="calc-type-name">Система хранения / Шкаф</span></button>
+                  <button class="calc-type-btn" data-type="tv" data-base-price="18000"><span class="calc-type-name">ТВ-зона / Консоль</span></button>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="calc-group-title">2. Габариты конструкции</h3>
+                
+                <div class="slider-wrap">
+                  <div class="slider-header">
+                    <span>Ширина:</span>
+                    <span><strong id="widthVal">3.0</strong> м.</span>
+                  </div>
+                  <div class="stepper-control">
+                    <button class="stepper-btn" id="wMinus" type="button" aria-label="Уменьшить ширину">–</button>
+                    <input type="range" class="calc-range" id="widthSlider" min="1" max="10" step="0.5" value="3">
+                    <button class="stepper-btn" id="wPlus" type="button" aria-label="Увеличить ширину">+</button>
+                  </div>
+                </div>
+
+                <div class="slider-wrap" style="margin-top: 24px;">
+                  <div class="slider-header">
+                    <span>Высота:</span>
+                    <span><strong id="heightVal">2.7</strong> м.</span>
+                  </div>
+                  <div class="stepper-control">
+                    <button class="stepper-btn" id="hMinus" type="button" aria-label="Уменьшить высоту">–</button>
+                    <input type="range" class="calc-range" id="heightSlider" min="1.5" max="3.5" step="0.1" value="2.7">
+                    <button class="stepper-btn" id="hPlus" type="button" aria-label="Увеличить высоту">+</button>
+                  </div>
+                </div>
+
+                <div class="plan-visual">
+                  <svg class="plan-svg" id="planSvg" viewBox="0 0 400 240">
+                    <g id="planFurniture"></g>
+                    <g id="planDimensions">
+                      <line id="planWidthLine" class="plan-dimension" x1="120" y1="215" x2="280" y2="215"/>
+                      <line id="planWidthTick1" class="plan-dimension" x1="120" y1="212" x2="120" y2="218"/>
+                      <line id="planWidthTick2" class="plan-dimension" x1="280" y1="212" x2="280" y2="218"/>
+                      <text id="planWidthText" class="plan-dim-text" x="200" y="232" text-anchor="middle">3.0 м</text>
+                      
+                      <line id="planHeightLine" class="plan-dimension" x1="105" y1="80" x2="105" y2="200"/>
+                      <line id="planHeightTick1" class="plan-dimension" x1="102" y1="80" x2="108" y2="80"/>
+                      <line id="planHeightTick2" class="plan-dimension" x1="102" y1="200" x2="108" y2="200"/>
+                      <text id="planHeightText" class="plan-dim-text" x="95" y="145" text-anchor="end">2.7 м</text>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="calc-group-title">3. Отделка и фурнитура</h3>
+                <div class="calc-materials">
+                  <label class="material-option">
+                    <input type="radio" name="material" value="standard" checked data-multiplier="1.0">
+                    <span class="material-option-title">База</span>
+                    <span class="material-option-desc">ЛДСП, качественные комплектующие</span>
+                  </label>
+                  <label class="material-option">
+                    <input type="radio" name="material" value="premium" data-multiplier="1.45">
+                    <span class="material-option-title">Премиум</span>
+                    <span class="material-option-desc">МДФ эмаль/шпон, Blum</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-result-sticky">
+                <div>
+                  <span class="calc-price-title">Предварительный расчёт</span>
+                  <div class="calc-price-range">~ <span id="priceMin">94 500</span> – <span id="priceMax">113 400</span> ₽</div>
+                </div>
+                
+                <div class="calc-summary-list">
+                  <div class="calc-summary-item"><span>Объект:</span><span id="summaryType">Кухонный гарнитур</span></div>
+                  <div class="calc-summary-item"><span>Габариты:</span><span id="summaryDimensions">3.0 x 2.7 м.</span></div>
+                  <div class="calc-summary-item"><span>Отделка:</span><span id="summaryMaterial">База</span></div>
+                </div>
+                
+                <div>
+                  <button class="button button-accent calc-action-btn" id="sendEstimateBtn" type="button" style="width: 100%;">Перенести в заявку ↴</button>
+                  <p class="calc-disclaimer">Точный расчет проекта выполняется после замера.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section id="reviews">
+      <div class="container">
+        <div class="reviews-header reveal">
+          <div>
+            <p class="section-label">04 / Опыт</p>
+            <h2 class="section-heading">Слова тех, кто <span>доверил нам свой интерьер.</span></h2>
+          </div>
+          <p class="reviews-note">Проектируем и собираем с заботой о функциональности.</p>
+        </div>
+        <div style="overflow: hidden;" class="reveal">
+          <div class="reviews-track" id="reviewsTrack"></div>
+        </div>
+        <div class="reviews-nav reveal">
+          <button class="reviews-nav-btn" id="reviewsPrev" aria-label="Предыдущий"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="reviews-dots" id="reviewsDots"></div>
+          <button class="reviews-nav-btn" id="reviewsNext" aria-label="Следующий"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОДХОД -->
+    <section class="approach">
+      <div class="container">
+        <div class="approach-card reveal">
+          <div class="approach-inner">
+            <div>
+              <p class="section-label">05 / Стандарты</p>
+              <h2 class="section-heading">Детали формируют <span>пространство.</span></h2>
+            </div>
+            <div>
+              <p class="approach-copy">Каждый проект начинается с задачи клиента и заканчивается идеальным монтажом. Внимание к зазорам, стыкам и функциональности — наш стандарт.</p>
+              <div class="facts">
+                <div class="fact"><span class="fact-number">01</span><p>Точность проектирования до миллиметра</p></div>
+                <div class="fact"><span class="fact-number">02</span><p>Европейские стандарты зазоров и фурнитуры</p></div>
+                <div class="fact"><span class="fact-number">03</span><p>Интеграция мебели под кривизну стен без щелей</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contacts">
+      <div class="container">
+        <div class="contacts-card reveal">
+          <div class="contacts-grid">
+            <div>
+              <p class="section-label">06 / Локация</p>
+              <h2 class="section-heading">Студия в <span>Астрахани.</span></h2>
+              <p class="contacts-description">Отправьте размеры или готовый дизайн-проект. Поможем спроектировать и уложиться в бюджет.</p>
+
+              <div class="contact-links phones-group">
+                <a class="button button-accent" href="https://t.me/nebareev" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+                <a class="button" href="https://wa.me/79627534403?text=Здравствуйте!%20Хочу%20обсудить%20проект%20мебели." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="button" href="tel:+79627534403">+7 962 753-44-03</a>
+              </div>
+            </div>
+            <aside class="qr-card">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&format=svg&data=https%3A%2F%2Ft.me%2Fnebareev" alt="QR-код Telegram" loading="lazy" />
+              <p>Наведите камеру,<br>чтобы написать напрямую</p>
+              <span>@nebareev</span>
+            </aside>
+          </div>
+
+          <div class="map-wrapper reveal" id="mapWrapperBlock">
+            <div class="map-header">
+              <div>
+                <span class="map-badge">📍 Локация</span>
+                <p class="map-address">1-й проезд Рождественского, 11А/1</p>
+              </div>
+              <a class="button" href="https://yandex.ru/maps/?text=Астрахань,+1-й+проезд+Рождественского,+11А/1" target="_blank" rel="noopener noreferrer">Карты ↗</a>
+            </div>
+            <div class="map-frame-container">
+              <iframe id="mapFrame" class="map-frame" src="about:blank" data-src="https://yandex.ru/map-widget/v1/?mode=search&text=Астрахань,+1-й+проезд+Рождественского,+11А/1&z=16" allowfullscreen loading="lazy"></iframe>
+              <div class="map-placeholder" id="mapPlaceholder" tabindex="0" role="button" aria-label="Загрузить карту">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <p>Показать интерактивную карту</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФОРМА ЗАЯВКИ -->
+    <section id="request">
+      <div class="container">
+        <div class="request-card reveal">
+          <div class="request-grid">
+            <div>
+              <p class="section-label">07 / Связь</p>
+              <h2 class="section-heading">Начать <span>совместный проект.</span></h2>
+              <p class="request-description">Инженер-конструктор свяжется с вами в течение рабочего дня для консультации.</p>
+              <div class="request-benefits">
+                <div class="request-benefit"><span class="benefit-icon">⏱</span><div><strong>Замер и 3D-проект</strong><p>Делаем точный замер лазерным оборудованием по Астрахани.</p></div></div>
+                <div class="request-benefit"><span class="benefit-icon">📐</span><div><strong>Высокая надежность</strong><p>Используем только проверенные шпоны, эмали и системы выдвижения.</p></div></div>
+              </div>
+            </div>
+            <div>
+              <form class="request-form" id="requestForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="formName">Ваше имя</label>
+                  <input class="form-input" type="text" id="formName" name="name" required minlength="2" autocomplete="name" />
+                  <span class="form-error">Введите имя (минимум 2 символа)</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="formPhone">Телефон</label>
+                  <input class="form-input" type="tel" id="formPhone" name="phone" placeholder="+7 (999) 999-99-99" required autocomplete="tel" inputmode="tel" />
+                  <span class="form-error">Введите корректный номер</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="formService">Что необходимо спроектировать?</label>
+                  <input class="form-input" type="text" id="formService" name="service" placeholder="Например: Кухонный гарнитур" required />
+                  <span class="form-error">Укажите тип изделия</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="formMessage">Детали проекта <span class="form-optional">(необязательно)</span></label>
+                  <textarea class="form-input" id="formMessage" placeholder="Размеры, пожелания, фурнитура..." rows="3"></textarea>
+                </div>
+
+                <div class="form-agreement">
+                  Нажимая кнопку, вы соглашаетесь на обработку персональных данных в соответствии с 
+                  <a href="/privacy.html" target="_blank" rel="noopener noreferrer">Политикой конфиденциальности</a>.
+                </div>
+
+                <button type="submit" class="button button-accent form-submit" id="formSubmitBtn" style="width: 100%;">
+                  <span class="submit-text">Отправить заявку</span>
+                  <span class="submit-loader"></span>
+                </button>
+              </form>
+
+              <div class="form-success" id="formSuccess">
+                <h3>Заявка успешно отправлена!</h3>
+                <p style="color: var(--text-muted); margin: 16px 0 24px;">Конструктор свяжется с вами для уточнения деталей. Вы также можете отправить проект в мессенджер:</p>
+                <a class="button button-accent" href="https://t.me/nebareev" target="_blank" rel="noopener noreferrer">Написать в Telegram ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Bareev Corp.</span>
+      <span>Студия архитектурной мебели · Астрахань</span>
+      <a href="https://t.me/nebareev" target="_blank" rel="noopener noreferrer">@nebareev</a>
+    </div>
+  </footer>
+
+  <!-- COOKIE БАННЕР -->
+  <div id="cookieBanner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:var(--bg-surface); border-top:1px solid var(--border-light); padding:16px 24px; box-shadow: 0 -10px 40px rgba(0,0,0,0.05); justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; transition: opacity 0.3s ease;">
+    <p style="margin:0; font-size:12px; color:var(--text-muted); max-width:800px; line-height:1.5;">
+      Мы используем файлы cookie и сервис Яндекс.Метрика для анализа аудитории и улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="/privacy.html" style="color:var(--accent); text-decoration:underline;">Политикой конфиденциальности</a>.
+    </p>
+    <button id="cookieAcceptBtn" class="button button-accent" style="min-height: 40px; padding: 0 24px; font-size: 10px;">Я согласен</button>
+  </div>
+
+  <a href="tel:+79627534403" class="mobile-call-fab" id="mobileCallFab" aria-label="Позвонить">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span class="call-fab-pulse"></span>
+  </a>
+
+  <!-- Скрипты Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxoZQfmC7yvUKaM57Dw98YiAjFCU3EI_wSUSdfqMllObElXx6D8burkwbKjrfJBPWI0KA/exec";
+
+    /* =====================================================
+       ЗАЩИТА: Блокировка правой кнопки мыши и DevTools (мягкая версия)
+    ===================================================== */
+    document.addEventListener('contextmenu', (e) => {
+      if (e.target.closest('a') || e.target.closest('.phones-group') || e.target.closest('input') || e.target.closest('textarea')) return;
+      e.preventDefault();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
+      if ((e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+          (e.metaKey && e.altKey && ['I', 'J', 'C'].includes(e.key.toUpperCase()))) {
+        e.preventDefault();
+        return false;
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key.toUpperCase() === 'U') { e.preventDefault(); return false; }
+    });
+
+    /* =====================================================
+       1. КУРСОР
+    ===================================================== */
+    const cDot = document.getElementById("cursorDot");
+    if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
+      let mX = -100, mY = -100, cX = -100, cY = -100, cursorRAF = null;
+      
+      function animCursor() {
+        cX += (mX - cX) * 0.2; cY += (mY - cY) * 0.2;
+        cDot.style.left = cX + "px"; cDot.style.top = cY + "px";
+        if (Math.abs(mX - cX) > 0.5 || Math.abs(mY - cY) > 0.5) cursorRAF = requestAnimationFrame(animCursor);
+        else cursorRAF = null;
+      }
+      
+      document.addEventListener("mousemove", e => {
+        mX = e.clientX; mY = e.clientY; document.body.classList.add("cursor-active");
+        if (!cursorRAF) cursorRAF = requestAnimationFrame(animCursor);
+      });
+      
+      const interact = "a, button, input, select, textarea, .work, .review-card, .service-card, .material-option";
+      document.addEventListener("mouseover", e => { if (e.target.closest(interact)) document.body.classList.add("cursor-hover"); });
+      document.addEventListener("mouseout", e => { if (e.target.closest(interact)) document.body.classList.remove("cursor-hover"); });
+      document.addEventListener("mouseleave", () => document.body.classList.remove("cursor-active"));
+
+      const mapContainer = document.querySelector(".map-frame-container");
+      if (mapContainer) {
+        mapContainer.addEventListener("mouseenter", () => {
+          document.body.classList.remove("cursor-active", "cursor-hover");
+          cDot.style.opacity = "0";
+        });
+        mapContainer.addEventListener("mouseleave", () => {
+          document.body.classList.add("cursor-active");
+          cDot.style.opacity = "1";
+        });
+      }
+    }
+
+    /* =====================================================
+       2. ПОРТФОЛИО
+    ===================================================== */
+    const pPhotos = [
+      { i: "img/work-1.webp", thumb: "img/work-1.webp", t: "Кухня с графитовыми фасадами", c: "kitchen" },
+      { i: "img/work-2.webp", thumb: "img/work-2.webp", t: "Интегрированная ТВ-зона", c: "living" },
+      { i: "img/work-3.webp", thumb: "img/work-3.webp", t: "Серый шкаф под бетон", c: "closet" },
+      { i: "img/work-4.webp", thumb: "img/work-4.webp", t: "Ниша под ТВ в бежевом шкафу", c: "living" },
+      { i: "img/work-5.webp", thumb: "img/work-5.webp", t: "Встроенная кухня, шпон", c: "kitchen" },
+      { i: "img/work-6.webp", thumb: "img/work-6.webp", t: "Классический шкаф со стеклом", c: "closet" },
+      { i: "img/work-7.webp", thumb: "img/work-7.webp", t: "Светлая гардеробная Master", c: "closet" },
+      { i: "img/work-8.webp", thumb: "img/work-8.webp", t: "Угловой открытый шкаф", c: "closet" }
+    ];
+    const pGrid = document.getElementById("portfolioGrid"), loadBtn = document.getElementById("loadMoreBtn"), loadBox = document.getElementById("loadMoreBox");
+    let curLimit = 4, curFilter = "all";
+    const getCat = c => ({ kitchen: "Кухни", living: "Гостиные", closet: "Гардеробные" }[c] || "Проект");
+
+    Fancybox.bind('[data-fancybox="gallery"]', { Hash: false, Thumbs: false, Toolbar: { display: { left: [], middle: [], right: ["close"] } }, Images: { zoom: false }, Carousel: { transition: "fade" } });
+
+    function createWorkElement(w) {
+      const el = document.createElement("a");
+      el.className = "work";
+      el.href = w.i;
+      el.setAttribute("data-fancybox", "gallery");
+      el.setAttribute("data-caption", w.t);
+      el.innerHTML = `<div class="work-img-wrap"><img src="${w.thumb || w.i}" alt="${w.t}" loading="lazy" /></div><h4 class="work-title">${w.t}</h4><div class="work-category"><span>${getCat(w.c)}</span> <span>Открыть ↗</span></div>`;
+      return el;
+    }
+
+    function initPort(f = "all", reset = true) {
+      if (reset) {
+        curLimit = 4;
+        curFilter = f;
+        pGrid.style.opacity = "0";
+        setTimeout(() => {
+          pGrid.innerHTML = "";
+          const filtered = pPhotos.filter(x => curFilter === "all" || x.c === curFilter);
+          filtered.slice(0, curLimit).forEach(w => pGrid.appendChild(createWorkElement(w)));
+          pGrid.style.opacity = "1";
+          loadBox.style.display = filtered.length > curLimit ? "block" : "none";
+        }, 300);
+      } else {
+        const filtered = pPhotos.filter(x => curFilter === "all" || x.c === curFilter);
+        const currentCount = pGrid.children.length;
+        filtered.slice(currentCount, curLimit).forEach(w => pGrid.appendChild(createWorkElement(w)));
+        loadBox.style.display = filtered.length > curLimit ? "block" : "none";
+      }
+    }
+
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      const cat = btn.dataset.filter; const count = cat === "all" ? pPhotos.length : pPhotos.filter(w => w.c === cat).length;
+      btn.innerHTML += ` <span style="opacity:0.5;">(${count})</span>`;
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(x => { x.classList.remove("active"); x.setAttribute("aria-pressed", "false"); });
+        btn.classList.add("active"); btn.setAttribute("aria-pressed", "true");
+        initPort(cat);
+      });
+    });
+    loadBtn.onclick = () => { curLimit += 4; initPort(curFilter, false); };
+    initPort();
+
+    /* =====================================================
+       3. КАЛЬКУЛЯТОР
+    ===================================================== */
+    const tBtns = document.querySelectorAll(".calc-type-btn");
+    const wSl = document.getElementById("widthSlider"), hSl = document.getElementById("heightSlider");
+    const mOpts = document.querySelectorAll("input[name='material']");
+    const pFurn = document.getElementById("planFurniture");
+    let aBase = 35000, aName = "Кухонный гарнитур", aType = "kitchen", lEst = {};
+
+    const roundVal = (v) => parseFloat(parseFloat(v).toFixed(1));
+
+    document.getElementById("wMinus").onclick = () => { wSl.value = roundVal(Math.max(parseFloat(wSl.min), parseFloat(wSl.value) - parseFloat(wSl.step))); updateCalc(); };
+    document.getElementById("wPlus").onclick = () => { wSl.value = roundVal(Math.min(parseFloat(wSl.max), parseFloat(wSl.value) + parseFloat(wSl.step))); updateCalc(); };
+    document.getElementById("hMinus").onclick = () => { hSl.value = roundVal(Math.max(parseFloat(hSl.min), parseFloat(hSl.value) - parseFloat(hSl.step))); updateCalc(); };
+    document.getElementById("hPlus").onclick = () => { hSl.value = roundVal(Math.min(parseFloat(hSl.max), parseFloat(hSl.value) + parseFloat(hSl.step))); updateCalc(); };
+
+    function updatePlan(w, h) {
+      const scaleX = 32, scaleY = 40;
+      const svgW = w * scaleX, svgH = h * scaleY;
+      const cx = 200, floorY = 200, topY = floorY - svgH;
+      const startX = cx - svgW / 2, endX = cx + svgW / 2;
+
+      document.getElementById("planWidthLine").setAttribute("x1", startX); document.getElementById("planWidthLine").setAttribute("x2", endX);
+      document.getElementById("planWidthTick1").setAttribute("x1", startX); document.getElementById("planWidthTick1").setAttribute("x2", startX);
+      document.getElementById("planWidthTick2").setAttribute("x1", endX); document.getElementById("planWidthTick2").setAttribute("x2", endX);
+      document.getElementById("planWidthText").textContent = w.toFixed(1) + " м";
+
+      const lineX = startX - 15;
+      document.getElementById("planHeightLine").setAttribute("x1", lineX); document.getElementById("planHeightLine").setAttribute("x2", lineX);
+      document.getElementById("planHeightLine").setAttribute("y1", topY); document.getElementById("planHeightLine").setAttribute("y2", floorY);
+      document.getElementById("planHeightTick1").setAttribute("x1", lineX-3); document.getElementById("planHeightTick1").setAttribute("x2", lineX+3);
+      document.getElementById("planHeightTick1").setAttribute("y1", topY); document.getElementById("planHeightTick1").setAttribute("y2", topY);
+      document.getElementById("planHeightTick2").setAttribute("x1", lineX-3); document.getElementById("planHeightTick2").setAttribute("x2", lineX+3);
+      document.getElementById("planHeightTick2").setAttribute("y1", floorY); document.getElementById("planHeightTick2").setAttribute("y2", floorY);
+      const ht = document.getElementById("planHeightText"); ht.setAttribute("x", lineX - 8); ht.setAttribute("y", topY + (svgH/2) + 4); ht.textContent = h.toFixed(1) + " м";
+
+      let html = "";
+      if (aType === "kitchen") {
+        const baseH = svgH * 0.35;
+        html += `<rect class="plan-shape" x="${startX}" y="${floorY - baseH}" width="${svgW}" height="${baseH}"/><rect class="plan-shape" x="${startX}" y="${topY}" width="${svgW}" height="${baseH}"/>`;
+      } else if (aType === "wardrobe") {
+        html += `<rect class="plan-shape" x="${startX}" y="${topY}" width="${svgW}" height="${svgH}"/>`;
+        const doors = Math.max(2, Math.round(w / 0.8));
+        for(let i=1; i<doors; i++) html += `<line class="plan-line" x1="${startX + (svgW/doors)*i}" y1="${topY}" x2="${startX + (svgW/doors)*i}" y2="${floorY}"/>`;
+      } else {
+        const standH = svgH * 0.25, tvW = Math.min(svgW * 0.7, 100), tvH = tvW * 0.56;
+        html += `<rect class="plan-shape" x="${startX}" y="${floorY - standH}" width="${svgW}" height="${standH}"/><rect class="plan-shape" x="${cx - tvW/2}" y="${floorY - standH - 10 - tvH}" width="${tvW}" height="${tvH}"/>`;
+      }
+      pFurn.innerHTML = html;
+    }
+
+    function updateCalc() {
+      const w = parseFloat(wSl.value), h = parseFloat(hSl.value);
+      let m = 1.0, mN = "База";
+      mOpts.forEach(o => { if (o.checked) { m = parseFloat(o.dataset.multiplier); mN = o.parentElement.querySelector(".material-option-title").textContent; } });
+
+      document.getElementById("widthVal").textContent = w.toFixed(1); document.getElementById("heightVal").textContent = h.toFixed(1);
+      let min = Math.round(((aBase * ((w * h) / 3)) * m) / 100) * 100;
+      document.getElementById("priceMin").textContent = min.toLocaleString("ru-RU"); document.getElementById("priceMax").textContent = (Math.round((min * 1.2) / 100) * 100).toLocaleString("ru-RU");
+
+      document.getElementById("summaryType").textContent = aName;
+      document.getElementById("summaryDimensions").textContent = `${w.toFixed(1)} x ${h.toFixed(1)} м.`;
+      document.getElementById("summaryMaterial").textContent = mN;
+      lEst = { t: aName, w, h, m: mN, min };
+      updatePlan(w, h);
+    }
+
+    tBtns.forEach(b => b.onclick = () => {
+      tBtns.forEach(x => x.classList.remove("active"));
+      b.classList.add("active");
+      aBase = parseFloat(b.dataset.basePrice);
+      aName = b.querySelector(".calc-type-name").textContent;
+      aType = b.dataset.type;
+
+      if (aType === "tv") {
+        hSl.value = 1.8;
+      } else if (parseFloat(hSl.value) < 2.0) {
+        hSl.value = 2.7;
+      }
+      updateCalc();
+    });
+
+    wSl.oninput = updateCalc; hSl.oninput = updateCalc; mOpts.forEach(o => o.onchange = updateCalc); updateCalc();
+
+    document.getElementById("sendEstimateBtn").onclick = () => {
+      const formMsg = document.getElementById("formMessage");
+      const formName = document.getElementById("formName");
+      const serviceInput = document.getElementById("formService");
+      
+      formMsg.value = `Конфигурация:\n• ${lEst.t}\n• Габариты: ${lEst.w}м × ${lEst.h}м\n• Отделка: ${lEst.m}\n• Ориентировочный бюджет: от ${lEst.min.toLocaleString("ru-RU")} ₽`;
+      serviceInput.value = `${lEst.t}`;
+      serviceInput.classList.remove("error");
+      serviceInput.closest(".form-group")?.classList.remove("has-error");
+
+      document.getElementById("request").scrollIntoView({ behavior: "smooth" });
+      
+      setTimeout(() => {
+        formName.focus();
+        formMsg.classList.add("highlight");
+        setTimeout(() => formMsg.classList.remove("highlight"), 1200);
+      }, 800);
+    };
+
+    /* =====================================================
+       4. ОТЗЫВЫ 
+    ===================================================== */
+    const rData = [
+      { n: "Алексей М.", d: "Встроенная кухня", q: "Идеально выдержали зазоры, установили аккуратно. Blum работает превосходно.", s: "Telegram", i: "А" },
+      { n: "Марина К.", d: "Гардеробная Master", q: "Помогли рационально использовать каждый свободный сантиметр в проеме.", s: "WhatsApp", i: "М" },
+      { n: "Дмитрий В.", d: "ТВ-зона и шпон", q: "Очень аккуратный шпон, все текстуры подобраны стык-в-стык. Дорогой вид.", s: "Avito", i: "Д" }
+    ];
+    const rTrack = document.getElementById("reviewsTrack"), rDots = document.getElementById("reviewsDots");
+    rTrack.innerHTML = rData.map(r => `<article class="review-card"><div class="review-top"><div class="review-stars">★★★★★</div><span class="review-source">${r.s}</span></div><p class="review-quote">«${r.q}»</p><div class="review-author"><div class="review-avatar">${r.i}</div><div><span class="review-name">${r.n}</span><span class="review-detail">${r.d}</span></div></div></article>`).join("");
+    
+    let cRev = 0;
+    function updateRev() {
+      const pv = window.innerWidth <= 992 ? 1 : (window.innerWidth <= 1200 ? 2 : 3);
+      const max = Math.max(1, rData.length - pv + 1); cRev = Math.max(0, Math.min(cRev, max - 1));
+      const firstCard = rTrack.children[0]; if (firstCard) rTrack.style.transform = `translateX(-${cRev * (firstCard.offsetWidth + 24)}px)`;
+      document.getElementById("reviewsPrev").disabled = cRev === 0; document.getElementById("reviewsNext").disabled = cRev >= max - 1;
+      rDots.innerHTML = Array.from({ length: max }, (_, i) => `<div class="reviews-dot ${i === cRev ? "active" : ""}" data-i="${i}"></div>`).join("");
+      rDots.querySelectorAll(".reviews-dot").forEach(d => d.onclick = () => { cRev = parseInt(d.dataset.i); updateRev(); });
+    }
+
+    document.getElementById("reviewsPrev").onclick = () => { cRev--; updateRev(); }; 
+    document.getElementById("reviewsNext").onclick = () => { cRev++; updateRev(); };
+    
+    let resizeTimer; 
+    window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(updateRev, 150); });
+    window.addEventListener("load", updateRev); updateRev();
+
+    let touchStartX = 0;
+    rTrack.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].clientX, { passive: true });
+    rTrack.addEventListener('touchend', e => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diffX = touchStartX - touchEndX;
+      if (Math.abs(diffX) > 50) {
+        const pv = window.innerWidth <= 992 ? 1 : (window.innerWidth <= 1200 ? 2 : 3);
+        const max = Math.max(1, rData.length - pv + 1);
+        if (diffX > 0 && cRev < max - 1) { cRev++; updateRev(); }
+        else if (diffX < 0 && cRev > 0) { cRev--; updateRev(); }
+      }
+    }, { passive: true });
+
+    /* =====================================================
+       5. МЕНЮ И СКРОЛЛ
+    ===================================================== */
+    const mMenu = document.getElementById("mobileMenu"), mTog = document.getElementById("menuToggle"), nWrap = document.getElementById("navWrapper"), fab = document.getElementById("mobileCallFab");
+    mTog.onclick = () => { const o = mMenu.classList.toggle("open"); mTog.classList.toggle("open"); mTog.setAttribute("aria-expanded", o); mMenu.setAttribute("aria-hidden", !o); document.body.style.overflow = o ? "hidden" : ""; };
+    document.querySelectorAll(".mobile-link").forEach(l => l.onclick = () => { mMenu.classList.remove("open"); mTog.classList.remove("open"); mTog.setAttribute("aria-expanded", "false"); mMenu.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; });
+    window.addEventListener("scroll", () => { const y = window.scrollY; nWrap.classList.toggle("scrolled", y > 50); if (fab) fab.classList.toggle("visible", y > 300); }, { passive: true });
+
+    /* =====================================================
+       6. КАРТЫ (LAZY LOAD)
+    ===================================================== */
+    const mPh = document.getElementById("mapPlaceholder"), mFr = document.getElementById("mapFrame");
+    function loadMap() { mFr.src = mFr.dataset.src; mPh.classList.add("hidden"); }
+    if (mPh) mPh.addEventListener("click", loadMap);
+
+    /* =====================================================
+       7. МАСКА НОМЕРА ТЕЛЕФОНА
+    ===================================================== */
+    const phInp = document.getElementById("formPhone");
+    const getInputNumbersValue = (input) => input.value.replace(/\D/g, '');
+    const onPhoneInput = (e) => {
+      let input = e.target, inputNumbersValue = getInputNumbersValue(input), selectionStart = input.selectionStart, formattedInputValue = "";
+      if (!inputNumbersValue) return input.value = "";
+      if (input.value.length !== selectionStart) { if (e.data && /\D/g.test(e.data)) { input.value = inputNumbersValue; } return; }
+      if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
+        if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+        let firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
+        formattedInputValue = input.value = firstSymbols + " ";
+        if (inputNumbersValue.length > 1) formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
+        if (inputNumbersValue.length >= 5) formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+        if (inputNumbersValue.length >= 8) formattedInputValue += '-' + inputNumbersValue.substring(7, 9);
+        if (inputNumbersValue.length >= 10) formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
+      } else { formattedInputValue = '+' + inputNumbersValue.substring(0, 16); }
+      input.value = formattedInputValue;
+    }
+    const onPhoneKeyDown = function (e) { let inputValue = e.target.value.replace(/\D/g, ''); if (e.keyCode === 8 && inputValue.length === 1) e.target.value = ""; }
+    phInp.addEventListener('input', onPhoneInput, false); phInp.addEventListener('keydown', onPhoneKeyDown, false);
+
+    /* =====================================================
+       8. ФОРМА ОТПРАВКИ 
+    ===================================================== */
+    const rForm = document.getElementById("requestForm"), sBtn = document.getElementById("formSubmitBtn");
+    document.querySelectorAll(".form-input").forEach(inp => inp.addEventListener("input", () => { inp.classList.remove("error"); inp.closest(".form-group")?.classList.remove("has-error"); }));
+    
+    rForm.onsubmit = async e => {
+      e.preventDefault();
+      const nm = document.getElementById("formName"), ph = document.getElementById("formPhone"), sv = document.getElementById("formService"), ms = document.getElementById("formMessage");
+      let hasError = false;
+      
+      if (nm.value.trim().length < 2) { nm.classList.add("error"); nm.closest(".form-group").classList.add("has-error"); hasError = true; }
+      if (ph.value.replace(/\D/g, "").length < 11) { ph.classList.add("error"); ph.closest(".form-group").classList.add("has-error"); hasError = true; }
+      if (sv.value.trim().length === 0) { sv.classList.add("error"); sv.closest(".form-group").classList.add("has-error"); hasError = true; }
+      if (hasError) { const firstError = rForm.querySelector(".form-input.error"); if (firstError) firstError.focus(); return; }
+      
+      sBtn.classList.add("loading"); sBtn.disabled = true;
+      const params = new URLSearchParams(); 
+      params.append("name", nm.value.trim()); 
+      params.append("phone", ph.value); 
+      params.append("service", sv.value.trim()); 
+      params.append("message", ms.value.trim());
+      
+      try { 
+        await fetch(GOOGLE_SCRIPT_URL, { 
+          method: "POST", 
+          headers: { "Content-Type": "application/x-www-form-urlencoded" }, 
+          body: params.toString(), 
+          mode: "no-cors" 
+        });
+        
+        rForm.style.display = "none"; 
+        document.getElementById("formSuccess").classList.add("active");
+        
+        // Яндекс Метрика - срабатывание цели (лид)
+        if (typeof ym !== 'undefined') {
+          ym(112801992, 'reachGoal', 'lead');
+        }
+        
+      } catch (err) { 
+        console.error("Ошибка отправки формы:", err);
+        alert("Произошла ошибка при отправке. Пожалуйста, напишите нам в Telegram или позвоните напрямую.");
+        sBtn.classList.remove("loading"); 
+        sBtn.disabled = false;
+      }
+    };
+
+    /* =====================================================
+       9. АНИМАЦИИ
+    ===================================================== */
+    const obs = new IntersectionObserver(entries => { entries.forEach(x => { if (x.isIntersecting) { x.target.classList.add("visible"); obs.unobserve(x.target); } }); }, { threshold: 0.1 });
+    document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+    
+    if (window.gsap && window.innerWidth > 992) {
+      document.querySelectorAll(".button-accent").forEach(b => {
+        b.addEventListener("mousemove", e => { const r = b.getBoundingClientRect(); gsap.to(b, { x: (e.clientX - r.left - r.width / 2) * 0.15, y: (e.clientY - r.top - r.height / 2) * 0.15, duration: 0.4 }); });
+        b.addEventListener("mouseleave", () => { gsap.to(b, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.5)" }); });
+      });
+    }
+
+    /* =====================================================
+       10. COOKIE БАННЕР ЛОГИКА
+    ===================================================== */
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieAcceptBtn = document.getElementById('cookieAcceptBtn');
+
+    if (!localStorage.getItem('cookies_accepted')) {
+      cookieBanner.style.display = 'flex';
+    }
+
+    cookieAcceptBtn.onclick = () => {
+      localStorage.setItem('cookies_accepted', 'true');
+      cookieBanner.style.opacity = '0';
+      setTimeout(() => cookieBanner.style.display = 'none', 300);
+    };
+
+  }); // Конец DOMContentLoaded
+  </script>
+
+  <script>
+    /* Надёжный автозапуск hero-видео на мобильных Safari/Chrome */
+    (function () {
+      const video = document.querySelector('.hero-video');
+      if (!video) return;
+
+      video.muted = true;
+      video.defaultMuted = true;
+      video.setAttribute('muted', '');
+      video.setAttribute('playsinline', '');
+      video.setAttribute('webkit-playsinline', '');
+      video.setAttribute('autoplay', '');
+
+      const startVideo = () => {
+        const promise = video.play();
+        if (promise && typeof promise.catch === 'function') {
+          promise.catch(() => {});
+        }
+      };
+
+      if (video.readyState >= 2) {
+        startVideo();
+      } else {
+        video.addEventListener('loadeddata', startVideo, { once: true });
+        video.addEventListener('canplay', startVideo, { once: true });
+      }
+
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && video.paused) startVideo();
+      });
+    })();
+  </script>
+
+</body>
+</html>
