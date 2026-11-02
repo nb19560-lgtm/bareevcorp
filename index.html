@@ -9,8 +9,8 @@
   <title>BAREEV CORP. — Мебель и интерьеры</title>
 
   <link rel="canonical" href="https://bareevcorp.ru/" />
-  
-  <!-- ============ (Для мессенджеров) ============ -->
+
+  <!-- OPEN GRAPH (Для мессенджеров) -->
   <meta property="og:url" content="https://bareevcorp.ru/" />
   <meta property="og:title" content="BAREEV CORP. — Мебель на заказ в Астрахани" />
   <meta property="og:description" content="Кухни, шкафы, гардеробные, ТВ-зоны. Индивидуальный проект, точный лазерный замер." />
@@ -18,26 +18,26 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
 
-  <!-- ============ TWITTER CARDS (удалить надо) ============ -->
+  <!-- TWITTER CARDS --> 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BAREEV CORP. — Мебель на заказ в Астрахани">
   <meta name="twitter:description" content="Кухни, шкафы, гардеробные, ТВ-зоны. Индивидуальный проект.">
   <meta name="twitter:image" content="https://bareevcorp.ru/img/og-cover.jpg">
 
-  <!-- ============ ПРЕДЗАГРУЗКА ВИДОСА ============ -->
+  <!-- ПРЕДЗАГРУЗКА ВАЖНЫХ РЕСУРСОВ -->
   <link rel="preload" href="img/video-poster.webp" as="image" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" as="style" />
 
-  <!-- ============ SEO ВЕРИФИКАЦИЯ ============ -->
+  <!-- SEO ВЕРИФИКАЦИЯ ПОИСКОВИКОВ -->
   <meta name="yandex-verification" content="0f1eab25da65f6fc" />
   <meta name="google-site-verification" content="WVoSKqPROW1hvdQOdI_mvSx-ad58A2XYiudFe3xBMg8" />
 
-  <!-- ============ ИКОНКИ ============ -->
+  <!-- ИКОНКИ -->
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="img/favicon.png" />
   <link rel="apple-touch-icon" href="img/favicon.png" />
 
-  <!-- ============ МИКРОРАЗМЕТКА ============ -->
+  <!-- МИКРОРАЗМЕТКА SCHEMA.ORG -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +46,7 @@
     "image": "https://bareevcorp.ru/img/og-cover.jpg",
     "@id": "https://bareevcorp.ru/#localbusiness",
     "url": "https://bareevcorp.ru/",
-    "telephone": "+79627534403",
+    "telephone": "+79171807014",
     "priceRange": "$$$",
     "description": "Авторская встроенная и корпусная мебель по индивидуальным проектам в Астрахани. Кухни, шкафы, гардеробные, ТВ-зоны.",
     "address": {
@@ -116,7 +116,7 @@
     a { color: inherit; text-decoration: none; transition: var(--transition); }
     button { font: inherit; background: none; border: none; cursor: pointer; transition: var(--transition); }
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
-    
+
     .container { width: min(calc(100% - 40px), 1320px); margin: 0 auto; }
 
     .cursor-dot { position: fixed; top: 0; left: 0; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); opacity: 0; transition: width 0.3s, height 0.3s, background-color 0.3s, opacity 0.3s; }
@@ -136,16 +136,47 @@
     .nav-right-actions { display: flex; align-items: center; gap: 16px; }
     .nav-contact { padding: 12px 24px; border: 1px solid var(--accent); color: var(--accent); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; }
     .nav-contact:hover { background: var(--accent); color: var(--bg-main); }
-    .menu-toggle { display: none; flex-direction: column; justify-content: space-between; width: 28px; height: 14px; z-index: 110; }
-    .menu-toggle span { display: block; width: 100%; height: 1.5px; background: var(--accent); transition: transform 0.3s ease, opacity 0.3s ease; }
-    .menu-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .menu-toggle {
+      display: none; width: 46px; height: 46px; padding: 0;
+      flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+      border: 1px solid rgba(88, 84, 76, 0.18); border-radius: 50%;
+      background: rgba(249, 248, 245, 0.58); backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px); z-index: 110;
+      box-shadow: 0 4px 18px rgba(34, 33, 31, 0.06);
+    }
+    .menu-toggle span { display: block; width: 18px; height: 1.5px; background: var(--accent); transition: transform 0.3s ease, opacity 0.25s ease; }
+    .menu-toggle.open span:nth-child(1) { transform: translateY(3.25px) rotate(45deg); }
     .menu-toggle.open span:nth-child(2) { opacity: 0; }
-    .menu-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .menu-toggle.open span:nth-child(3) { transform: translateY(-3.25px) rotate(-45deg); }
 
-    .mobile-menu-overlay { position: fixed; inset: 0; background: var(--bg-main); z-index: 105; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 32px; opacity: 0; pointer-events: none; transition: opacity 0.4s; }
-    .mobile-menu-overlay.open { opacity: 1; pointer-events: auto; }
-    .mobile-menu-links { display: flex; flex-direction: column; align-items: center; gap: 24px; }
-    .mobile-menu-links a { font-family: var(--font-heading); font-size: 32px; color: var(--accent); }
+    .mobile-menu-overlay {
+      position: fixed; inset: 0; z-index: 105; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; gap: 32px; padding: 100px 24px 48px;
+      background: rgba(249, 248, 245, 0.74); backdrop-filter: blur(24px) saturate(145%);
+      -webkit-backdrop-filter: blur(24px) saturate(145%);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .mobile-menu-close {
+      position: absolute; top: 22px; right: 22px; width: 46px; height: 46px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(88, 84, 76, 0.18); border-radius: 50%;
+      background: rgba(255, 255, 255, 0.48); color: var(--accent);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 4px 18px rgba(34, 33, 31, 0.06);
+    }
+    .mobile-menu-close:hover { background: rgba(255, 255, 255, 0.8); transform: rotate(90deg); }
+    .mobile-menu-close svg { width: 19px; height: 19px; }
+    .mobile-menu-cta { margin-top: 24px; }
+    .mobile-menu-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mobile-menu-links { display: flex; flex-direction: column; align-items: center; gap: clamp(17px, 3.2vh, 26px); }
+    .mobile-menu-links a {
+      position: relative; font-family: var(--font-heading); font-size: clamp(27px, 7vw, 36px);
+      line-height: 1.15; letter-spacing: -0.025em; color: var(--accent);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .mobile-menu-links a:hover { opacity: 0.62; transform: translateY(-2px); }
 
     .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; position: relative; }
     .hero-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
@@ -160,7 +191,7 @@
     .hero-media { position: relative; aspect-ratio: 4/5; width: 100%; overflow: hidden; background: var(--border-light); border-radius: var(--radius-lg); }
     .hero-video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.95) contrast(1.05); transition: transform 0.8s ease; }
     .hero-media:hover .hero-video { transform: scale(1.03); }
-.media-overlay { position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.2) 100%); }
+    .media-overlay { position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.2) 100%); }
     .media-caption { position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 4; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .media-badge { color: #fff; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
     .live-dot { width: 6px; height: 6px; border-radius: 50%; background: #fff; display: inline-block; animation: pulseDot 1.8s infinite; }
@@ -213,7 +244,7 @@
     .calc-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: flex-start; }
     .calc-steps { display: flex; flex-direction: column; gap: 60px; }
     .calc-group-title { font-family: var(--font-heading); font-size: 28px; color: var(--accent); margin-bottom: 32px; border-bottom: 1px solid var(--border-light); padding-bottom: 12px; }
-    
+
     .calc-types { display: flex; flex-direction: column; gap: 8px; }
     .calc-type-btn { padding: 18px 24px; border: 1px solid var(--border); text-align: left; width: 100%; color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; border-radius: var(--radius-sm); }
     .calc-type-btn.active { border-color: var(--accent); color: var(--accent); background: var(--bg-main); }
@@ -221,11 +252,11 @@
     .slider-wrap { margin-bottom: 24px; }
     .slider-header { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
     .slider-header strong { color: var(--accent); font-weight: 500; font-size: 16px; }
-    
+
     .stepper-control { display: flex; align-items: center; gap: 16px; }
     .stepper-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg-main); color: var(--accent); font-size: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; user-select: none; transition: background-color 0.2s, color 0.2s, transform 0.15s; }
     .stepper-btn:active { background: var(--accent); color: #fff; transform: scale(0.92); }
-    
+
     .calc-range { width: 100%; height: 2px; background: var(--border); appearance: none; -webkit-appearance: none; outline: none; }
     .calc-range::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); cursor: pointer; transition: transform 0.2s; }
     .calc-range::-webkit-slider-thumb:hover { transform: scale(1.3); }
@@ -265,7 +296,7 @@
     .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-main); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--accent); font-weight: 500; font-size: 13px; }
     .review-name { font-size: 13px; font-weight: 500; color: var(--accent); display: block; }
     .review-detail { font-size: 12px; color: var(--text-muted); }
-    
+
     .reviews-nav { display: flex; gap: 12px; margin-top: 40px; justify-content: center; align-items: center; }
     .reviews-nav-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--accent); }
     .reviews-nav-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--bg-surface); }
@@ -333,7 +364,7 @@
     .form-agreement { font-size: 11px; color: var(--text-muted); line-height: 1.5; margin-top: -8px; }
     .form-agreement a { text-decoration: underline; color: var(--accent); }
     .form-agreement a:hover { opacity: 0.7; }
-    
+
     .form-submit.loading .submit-text { opacity: 0; }
     .form-submit.loading .submit-loader { display: block; }
     .submit-loader { display: none; position: absolute; width: 16px; height: 16px; border: 1px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
@@ -348,8 +379,109 @@
     .call-fab-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 1px solid var(--accent); animation: fabPulse 2.5s ease-out infinite; pointer-events: none; }
     @keyframes fabPulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.5); opacity: 0; } }
 
-    footer { padding: 40px 0; border-top: 1px solid var(--border-light); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
-    .footer-inner { display: flex; justify-content: space-between; gap: 16px; text-align: center; }
+    /* ФУТЕР — РАСШИРЕННЫЙ БРЕНДОВЫЙ И ЮРИДИЧЕСКИЙ БЛОК */
+    footer {
+      padding: 80px 0 40px;
+      border-top: 1px solid var(--border-light);
+      background: var(--bg-surface);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-brand-info .brand-main {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    .footer-desc {
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer-copyright {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+      margin-top: 8px;
+    }
+
+    .footer-title {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links-list a:hover {
+      color: var(--accent);
+      padding-left: 4px;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .footer-tg-link {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 500;
+      margin-top: 4px;
+      display: inline-block;
+    }
+
+    .footer-tg-link:hover {
+      opacity: 0.7;
+    }
+
+    .footer-legal-text {
+      line-height: 1.5;
+      font-size: 11px;
+    }
+
+    .footer-privacy-link {
+      color: var(--accent);
+      text-decoration: underline;
+      font-size: 11px;
+      display: inline-block;
+    }
+
+    .footer-privacy-link:hover {
+      opacity: 0.7;
+    }
 
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -360,6 +492,13 @@
       .nav-links { gap: 20px; }
       .review-card { flex: 0 0 calc((100% - 24px) / 2); }
       .hero-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 1024px) {
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 24px;
+      }
     }
 
     @media (max-width: 992px) {
@@ -378,15 +517,24 @@
       section { padding: 80px 0; }
       .services-top, .portfolio-header, .reviews-header { grid-template-columns: 1fr; gap: 20px; }
       .calc-materials { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; gap: 16px; align-items: center; }
       .mobile-call-fab { display: flex; }
       .brand-marquee { padding: 16px 0; }
       .marquee-list span { font-size: 11px; }
       .map-frame-container { height: 280px; }
     }
+
+    @media (max-width: 640px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      footer {
+        padding: 60px 0 30px;
+      }
+    }
   </style>
 
-  <!-- Yandex.Metrika counter -->
+  <!-- Yandex.Metrika -->
   <script type="text/javascript" >
      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
      m[i].l=1*new Date();
@@ -402,7 +550,7 @@
      });
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/112801992" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter -->
 
 </head>
 
@@ -431,17 +579,19 @@
     </div>
   </header>
 
-  <!-- МОБИЛЬНОЕ МЕНЮ (Переделать в бутерброд) -->
+  <!-- МОБИЛЬНОЕ МЕНЮ -->
   <div class="mobile-menu-overlay" id="mobileMenu" aria-hidden="true">
-    <nav class="mobile-menu-links">
+    <button class="mobile-menu-close" id="mobileMenuClose" type="button" aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+    <nav class="mobile-menu-links" aria-label="Мобильная навигация">
       <a href="#services" class="mobile-link">Услуги</a>
       <a href="#portfolio" class="mobile-link">Работы</a>
       <a href="#calculator" class="mobile-link">Калькулятор</a>
       <a href="#reviews" class="mobile-link">Отзывы</a>
       <a href="#contacts" class="mobile-link">Контакты</a>
-      <a href="#request" class="mobile-link">Заявка</a>
     </nav>
-    <a class="button button-accent mobile-link" href="#request" style="margin-top: 24px;">Оставить заявку</a>
+    <a class="button button-accent mobile-link mobile-menu-cta" href="#request">Оставить заявку</a>
   </div>
 
   <main id="top">
@@ -495,18 +645,6 @@
       </div>
     </section>
 
-    <!-- БЕГУЩАЯ СТРОКА (заменить или убрать)-->
-    <div class="brand-marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <div class="marquee-list">
-          <span>Кухни на заказ</span><span class="marquee-dot"></span><span>Шкафы-купе</span><span class="marquee-dot"></span><span>Гардеробные</span><span class="marquee-dot"></span><span>ТВ-зоны</span><span class="marquee-dot"></span><span>Сборка и монтаж</span><span class="marquee-dot"></span><span>Индивидуальные размеры</span><span class="marquee-dot"></span>
-        </div>
-        <div class="marquee-list">
-          <span>Кухни на заказ</span><span class="marquee-dot"></span><span>Шкафы-купе</span><span class="marquee-dot"></span><span>Гардеробные</span><span class="marquee-dot"></span><span>ТВ-зоны</span><span class="marquee-dot"></span><span>Сборка и монтаж</span><span class="marquee-dot"></span><span>Индивидуальные размеры</span><span class="marquee-dot"></span>
-        </div>
-      </div>
-    </div>
-
     <!-- УСЛУГИ -->
     <section id="services">
       <div class="container">
@@ -544,7 +682,7 @@
           </div>
           <p class="portfolio-hint">Каждый проект выполнен под индивидуальные параметры помещения. Нажмите, чтобы открыть во весь экран.</p>
         </div>
-        
+
         <div class="portfolio-filters reveal" id="portfolioFilters">
           <button class="filter-btn active" data-filter="all" aria-pressed="true">Все проекты</button>
           <button class="filter-btn" data-filter="kitchen" aria-pressed="false">Кухни</button>
@@ -568,7 +706,7 @@
 
         <div class="calc-card reveal">
           <div class="calc-grid">
-            
+
             <div class="calc-steps">
               <div>
                 <h3 class="calc-group-title">1. Тип изделия</h3>
@@ -581,7 +719,7 @@
 
               <div>
                 <h3 class="calc-group-title">2. Габариты конструкции</h3>
-                
+
                 <div class="slider-wrap">
                   <div class="slider-header">
                     <span>Ширина:</span>
@@ -614,7 +752,7 @@
                       <line id="planWidthTick1" class="plan-dimension" x1="120" y1="212" x2="120" y2="218"/>
                       <line id="planWidthTick2" class="plan-dimension" x1="280" y1="212" x2="280" y2="218"/>
                       <text id="planWidthText" class="plan-dim-text" x="200" y="232" text-anchor="middle">3.0 м</text>
-                      
+
                       <line id="planHeightLine" class="plan-dimension" x1="105" y1="80" x2="105" y2="200"/>
                       <line id="planHeightTick1" class="plan-dimension" x1="102" y1="80" x2="108" y2="80"/>
                       <line id="planHeightTick2" class="plan-dimension" x1="102" y1="200" x2="108" y2="200"/>
@@ -647,13 +785,13 @@
                   <span class="calc-price-title">Предварительный расчёт</span>
                   <div class="calc-price-range">~ <span id="priceMin">94 500</span> – <span id="priceMax">113 400</span> ₽</div>
                 </div>
-                
+
                 <div class="calc-summary-list">
                   <div class="calc-summary-item"><span>Объект:</span><span id="summaryType">Кухонный гарнитур</span></div>
                   <div class="calc-summary-item"><span>Габариты:</span><span id="summaryDimensions">3.0 x 2.7 м.</span></div>
                   <div class="calc-summary-item"><span>Отделка:</span><span id="summaryMaterial">База</span></div>
                 </div>
-                
+
                 <div>
                   <button class="button button-accent calc-action-btn" id="sendEstimateBtn" type="button" style="width: 100%;">Перенести в заявку ↴</button>
                   <p class="calc-disclaimer">Точный расчет проекта выполняется после замера.</p>
@@ -720,9 +858,9 @@
               <p class="contacts-description">Отправьте размеры или готовый дизайн-проект. Поможем спроектировать и уложиться в бюджет.</p>
 
               <div class="contact-links phones-group">
-                <a class="button button-accent" href="https://t.me/nebareev" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
-                <a class="button" href="https://wa.me/79627534403?text=Здравствуйте!%20Хочу%20обсудить%20проект%20мебели." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                <a class="button" href="tel:+79627534403">+7 962 753-44-03</a>
+                <a class="button button-accent" href="https://max.ru/79171807014" target="_blank" rel="noopener noreferrer">Max ↗</a>
+                <a class="button" href="https://wa.me/79171807014?text=Здравствуйте!%20Хочу%20обсудить%20проект%20мебели." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="button" href="tel:+79171807014">+7 917 180-70-14</a>
               </div>
             </div>
             <aside class="qr-card">
@@ -738,7 +876,7 @@
                 <span class="map-badge">📍 Локация</span>
                 <p class="map-address">1-й проезд Рождественского, 11А/1</p>
               </div>
-              <a class="button" href="https://yandex.ru/maps/?text=Астрахань,+1-й+проезд+Рождественского,+11А/1" target="_blank" rel="noopener noreferrer">Карты ↗</a>
+              <a class="button" href="https://yandex.ru/maps/org/bareev_corp/62362950643/?ll=48.051478%2C46.321810&mode=search&sctx=ZAAAAAgBEAAaKAoSCQPOUrKcBkhAEbdFmQ0yKUdAEhIJ85ApH4KqcT8Rl%2BXrMvynWz8iBgABAgMEBSgKOABAJUgBYjpyZWFycj1zY2hlbWVfTG9jYWwvR2VvdXBwZXIvQWR2ZXJ0cy9DdXN0b21NYXhhZHYvRW5hYmxlZD0xYjpyZWFycj1zY2hlbWVfTG9jYWwvR2VvdXBwZXIvQWR2ZXJ0cy9DdXN0b21NYXhhZHYvTWF4YWR2PTE1YkRyZWFycj1zY2hlbWVfTG9jYWwvR2VvdXBwZXIvQWR2ZXJ0cy9DdXN0b21NYXhhZHYvUmVnaW9uSWRzPVsxLDEwMTc0XWJAcmVhcnI9c2NoZW1lX0xvY2FsL0dlb3VwcGVyL0FkdmVydHMvTWF4YWR2VG9wTWl4L01heGFkdkZvck1peD0xMGoCcnWdAc3MzD2gAQCoAQC9ATGmWhbCAQbzt%2Fyo6AGCAgtiYXJlZXYgY29ycIoCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=48.051478%2C46.321810&sspn=0.015020%2C0.005880&text=bareev%20corp&z=17" target="_blank" rel="noopener noreferrer">Карты ↗</a>
             </div>
             <div class="map-frame-container">
               <iframe id="mapFrame" class="map-frame" src="about:blank" data-src="https://yandex.ru/map-widget/v1/?mode=search&text=Астрахань,+1-й+проезд+Рождественского,+11А/1&z=16" allowfullscreen loading="lazy"></iframe>
@@ -789,7 +927,7 @@
                 </div>
 
                 <div class="form-agreement">
-                  Нажимая кнопку, вы соглашаетесь на обработку персональных данных в соответствии с 
+                  Нажимая кнопку, вы соглашаетесь на обработку персональных данных в соответствии с
                   <a href="/privacy.html" target="_blank" rel="noopener noreferrer">Политикой конфиденциальности</a>.
                 </div>
 
@@ -811,11 +949,40 @@
     </section>
   </main>
 
+  <!-- Юр.Блок -->
   <footer>
-    <div class="container footer-inner">
-      <span>© 2026 Bareev Corp.</span>
-      <span>Студия архитектурной мебели · Астрахань</span>
-      <a href="https://t.me/nebareev" target="_blank" rel="noopener noreferrer">@nebareev</a>
+    <div class="container footer-content">
+      <div class="footer-col footer-brand-info">
+        <span class="brand-main">BAREEV CORP.</span>
+        <p class="footer-desc">Студия архитектурной мебели и индивидуальных интерьерных решений в Астрахани.</p>
+        <span class="footer-copyright">© 2026 Bareev Corp. Все права защищены.</span>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Навигация</h4>
+        <ul class="footer-links-list">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#portfolio">Работы</a></li>
+          <li><a href="#calculator">Калькулятор</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Контакты и связь</h4>
+        <p class="footer-text">1-й проезд Рождественского, 11А/1</p>
+        <p class="footer-text">+7 (917) 180-70-14</p>
+        <a class="footer-tg-link" href="https://t.me/nebareev" target="_blank" rel="noopener noreferrer">Telegram: @nebareev ↗</a>
+      </div>
+
+      <div class="footer-col footer-legal-col">
+        <h4 class="footer-title">Правовая информация</h4>
+        <p class="footer-legal-text">
+          Вся представленная на сайте информация носит ознакомительный характер и не является публичной офертой.
+        </p>
+        <a class="footer-privacy-link" href="/privacy.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+      </div>
     </div>
   </footer>
 
@@ -827,7 +994,7 @@
     <button id="cookieAcceptBtn" class="button button-accent" style="min-height: 40px; padding: 0 24px; font-size: 10px;">Я согласен</button>
   </div>
 
-  <a href="tel:+79627534403" class="mobile-call-fab" id="mobileCallFab" aria-label="Позвонить">
+  <a href="tel:+79171807014" class="mobile-call-fab" id="mobileCallFab" aria-label="Позвонить">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     <span class="call-fab-pulse"></span>
   </a>
@@ -840,43 +1007,23 @@
 
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxoZQfmC7yvUKaM57Dw98YiAjFCU3EI_wSUSdfqMllObElXx6D8burkwbKjrfJBPWI0KA/exec";
 
-    /* =====================================================
-       ЗАЩИТА: Блокировка f12 (убрать)
-    ===================================================== */
-    document.addEventListener('contextmenu', (e) => {
-      if (e.target.closest('a') || e.target.closest('.phones-group') || e.target.closest('input') || e.target.closest('textarea')) return;
-      e.preventDefault();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
-      if ((e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
-          (e.metaKey && e.altKey && ['I', 'J', 'C'].includes(e.key.toUpperCase()))) {
-        e.preventDefault();
-        return false;
-      }
-      if ((e.ctrlKey || e.metaKey) && e.key.toUpperCase() === 'U') { e.preventDefault(); return false; }
-    });
-
-    /* =====================================================
-       1. КУРСОР 
-    ===================================================== */
+      // КУРСОР 
     const cDot = document.getElementById("cursorDot");
     if (window.matchMedia("(hover: hover)").matches && window.innerWidth > 992) {
       let mX = -100, mY = -100, cX = -100, cY = -100, cursorRAF = null;
-      
+
       function animCursor() {
         cX += (mX - cX) * 0.2; cY += (mY - cY) * 0.2;
         cDot.style.left = cX + "px"; cDot.style.top = cY + "px";
         if (Math.abs(mX - cX) > 0.5 || Math.abs(mY - cY) > 0.5) cursorRAF = requestAnimationFrame(animCursor);
         else cursorRAF = null;
       }
-      
+
       document.addEventListener("mousemove", e => {
         mX = e.clientX; mY = e.clientY; document.body.classList.add("cursor-active");
         if (!cursorRAF) cursorRAF = requestAnimationFrame(animCursor);
       });
-      
+
       const interact = "a, button, input, select, textarea, .work, .review-card, .service-card, .material-option";
       document.addEventListener("mouseover", e => { if (e.target.closest(interact)) document.body.classList.add("cursor-hover"); });
       document.addEventListener("mouseout", e => { if (e.target.closest(interact)) document.body.classList.remove("cursor-hover"); });
@@ -895,18 +1042,16 @@
       }
     }
 
-    /* =====================================================
-       2. ПОРТФОЛИО
-    ===================================================== */
+      // ПОРТФОЛИО 
     const pPhotos = [
-      { i: "img/work-1.webp", thumb: "img/work-1.webp", t: "Кухня с графитовыми фасадами", c: "kitchen" },
-      { i: "img/work-2.webp", thumb: "img/work-2.webp", t: "Интегрированная ТВ-зона", c: "living" },
-      { i: "img/work-3.webp", thumb: "img/work-3.webp", t: "Серый шкаф под бетон", c: "closet" },
-      { i: "img/work-4.webp", thumb: "img/work-4.webp", t: "Ниша под ТВ в бежевом шкафу", c: "living" },
-      { i: "img/work-5.webp", thumb: "img/work-5.webp", t: "Встроенная кухня, шпон", c: "kitchen" },
-      { i: "img/work-6.webp", thumb: "img/work-6.webp", t: "Классический шкаф со стеклом", c: "closet" },
-      { i: "img/work-7.webp", thumb: "img/work-7.webp", t: "Светлая гардеробная Master", c: "closet" },
-      { i: "img/work-8.webp", thumb: "img/work-8.webp", t: "Угловой открытый шкаф", c: "closet" }
+      { i: "img/work-1.webp", thumb: "img/work-1.webp", t: "Серый шкаф под бетон", c: "closet" },
+      { i: "img/work-2.webp", thumb: "img/work-2.webp", t: "Ниша под ТВ в бежевом шкафу", c: "living" },
+      { i: "img/work-3.webp", thumb: "img/work-3.webp", t: "Кухня в нежном цвете", c: "kitchen" },
+      { i: "img/work-4.webp", thumb: "img/work-4.webp", t: "Классический шкаф со стеклом", c: "living" },
+      { i: "img/work-5.webp", thumb: "img/work-5.webp", t: "Светлая гардеробная Master", c: "closet" },
+      { i: "img/work-6.webp", thumb: "img/work-6.webp", t: "Угловой открытый шкаф", c: "closet" },
+      { i: "img/work-7.webp", thumb: "img/work-7.webp", t: "Кухня в бежевых оттенках", c: "kitchen" },
+      { i: "img/work-8.webp", thumb: "img/work-8.webp", t: "Интегрированная ТВ-зона", c: "living" }
     ];
     const pGrid = document.getElementById("portfolioGrid"), loadBtn = document.getElementById("loadMoreBtn"), loadBox = document.getElementById("loadMoreBox");
     let curLimit = 4, curFilter = "all";
@@ -956,9 +1101,7 @@
     loadBtn.onclick = () => { curLimit += 4; initPort(curFilter, false); };
     initPort();
 
-    /* =====================================================
-       3. КАЛЬКУЛЯТОР
-    ===================================================== */
+      // КАЛЬКУЛЯТОР 
     const tBtns = document.querySelectorAll(".calc-type-btn");
     const wSl = document.getElementById("widthSlider"), hSl = document.getElementById("heightSlider");
     const mOpts = document.querySelectorAll("input[name='material']");
@@ -1044,14 +1187,14 @@
       const formMsg = document.getElementById("formMessage");
       const formName = document.getElementById("formName");
       const serviceInput = document.getElementById("formService");
-      
+
       formMsg.value = `Конфигурация:\n• ${lEst.t}\n• Габариты: ${lEst.w}м × ${lEst.h}м\n• Отделка: ${lEst.m}\n• Ориентировочный бюджет: от ${lEst.min.toLocaleString("ru-RU")} ₽`;
       serviceInput.value = `${lEst.t}`;
       serviceInput.classList.remove("error");
       serviceInput.closest(".form-group")?.classList.remove("has-error");
 
       document.getElementById("request").scrollIntoView({ behavior: "smooth" });
-      
+
       setTimeout(() => {
         formName.focus();
         formMsg.classList.add("highlight");
@@ -1059,9 +1202,7 @@
       }, 800);
     };
 
-    /* =====================================================
-       4. ОТЗЫВЫ (поменять на реальные)
-    ===================================================== */
+      // ОТЗЫВЫ 
     const rData = [
       { n: "Алексей М.", d: "Встроенная кухня", q: "Идеально выдержали зазоры, установили аккуратно. Blum работает превосходно.", s: "Telegram", i: "А" },
       { n: "Марина К.", d: "Гардеробная Master", q: "Помогли рационально использовать каждый свободный сантиметр в проеме.", s: "WhatsApp", i: "М" },
@@ -1069,7 +1210,7 @@
     ];
     const rTrack = document.getElementById("reviewsTrack"), rDots = document.getElementById("reviewsDots");
     rTrack.innerHTML = rData.map(r => `<article class="review-card"><div class="review-top"><div class="review-stars">★★★★★</div><span class="review-source">${r.s}</span></div><p class="review-quote">«${r.q}»</p><div class="review-author"><div class="review-avatar">${r.i}</div><div><span class="review-name">${r.n}</span><span class="review-detail">${r.d}</span></div></div></article>`).join("");
-    
+
     let cRev = 0;
     function updateRev() {
       const pv = window.innerWidth <= 992 ? 1 : (window.innerWidth <= 1200 ? 2 : 3);
@@ -1080,10 +1221,10 @@
       rDots.querySelectorAll(".reviews-dot").forEach(d => d.onclick = () => { cRev = parseInt(d.dataset.i); updateRev(); });
     }
 
-    document.getElementById("reviewsPrev").onclick = () => { cRev--; updateRev(); }; 
+    document.getElementById("reviewsPrev").onclick = () => { cRev--; updateRev(); };
     document.getElementById("reviewsNext").onclick = () => { cRev++; updateRev(); };
-    
-    let resizeTimer; 
+
+    let resizeTimer;
     window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(updateRev, 150); });
     window.addEventListener("load", updateRev); updateRev();
 
@@ -1100,24 +1241,49 @@
       }
     }, { passive: true });
 
-    /* =====================================================
-       5. МЕНЮ И СКРОЛЛ
-    ===================================================== */
-    const mMenu = document.getElementById("mobileMenu"), mTog = document.getElementById("menuToggle"), nWrap = document.getElementById("navWrapper"), fab = document.getElementById("mobileCallFab");
-    mTog.onclick = () => { const o = mMenu.classList.toggle("open"); mTog.classList.toggle("open"); mTog.setAttribute("aria-expanded", o); mMenu.setAttribute("aria-hidden", !o); document.body.style.overflow = o ? "hidden" : ""; };
-    document.querySelectorAll(".mobile-link").forEach(l => l.onclick = () => { mMenu.classList.remove("open"); mTog.classList.remove("open"); mTog.setAttribute("aria-expanded", "false"); mMenu.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; });
-    window.addEventListener("scroll", () => { const y = window.scrollY; nWrap.classList.toggle("scrolled", y > 50); if (fab) fab.classList.toggle("visible", y > 300); }, { passive: true });
+      // МЕНЮ И СКРОЛЛ 
+    const mMenu = document.getElementById("mobileMenu");
+    const mTog = document.getElementById("menuToggle");
+    const mClose = document.getElementById("mobileMenuClose");
+    const nWrap = document.getElementById("navWrapper");
+    const fab = document.getElementById("mobileCallFab");
 
-    /* =====================================================
-       6. КАРТА (заменить на 2гис) 
-    ===================================================== */
+    function closeMobileMenu() {
+      mMenu.classList.remove("open");
+      mTog.classList.remove("open");
+      mTog.setAttribute("aria-expanded", "false");
+      mTog.setAttribute("aria-label", "Открыть меню");
+      mMenu.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    mTog.addEventListener("click", () => {
+      const isOpen = mMenu.classList.toggle("open");
+      mTog.classList.toggle("open", isOpen);
+      mTog.setAttribute("aria-expanded", String(isOpen));
+      mTog.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+      mMenu.setAttribute("aria-hidden", String(!isOpen));
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    });
+
+    mClose.addEventListener("click", closeMobileMenu);
+    document.querySelectorAll(".mobile-link").forEach(link => link.addEventListener("click", closeMobileMenu));
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && mMenu.classList.contains("open")) closeMobileMenu();
+    });
+
+    window.addEventListener("scroll", () => {
+      const y = window.scrollY;
+      nWrap.classList.toggle("scrolled", y > 50);
+      if (fab) fab.classList.toggle("visible", y > 300);
+    }, { passive: true });
+
+      // КАРТЫ 
     const mPh = document.getElementById("mapPlaceholder"), mFr = document.getElementById("mapFrame");
     function loadMap() { mFr.src = mFr.dataset.src; mPh.classList.add("hidden"); }
     if (mPh) mPh.addEventListener("click", loadMap);
 
-    /* =====================================================
-       7. МАСКА НОМЕРА ТЕЛЕФОНА
-    ===================================================== */
+       // МАСКА НОМЕРА ТЕЛЕФОНА 
     const phInp = document.getElementById("formPhone");
     const getInputNumbersValue = (input) => input.value.replace(/\D/g, '');
     const onPhoneInput = (e) => {
@@ -1138,59 +1304,55 @@
     const onPhoneKeyDown = function (e) { let inputValue = e.target.value.replace(/\D/g, ''); if (e.keyCode === 8 && inputValue.length === 1) e.target.value = ""; }
     phInp.addEventListener('input', onPhoneInput, false); phInp.addEventListener('keydown', onPhoneKeyDown, false);
 
-    /* =====================================================
-       8. ФОРМА ОТПРАВКИ 
-    ===================================================== */
+      // ФОРМА ОТПРАВКИ 
     const rForm = document.getElementById("requestForm"), sBtn = document.getElementById("formSubmitBtn");
     document.querySelectorAll(".form-input").forEach(inp => inp.addEventListener("input", () => { inp.classList.remove("error"); inp.closest(".form-group")?.classList.remove("has-error"); }));
-    
+
     rForm.onsubmit = async e => {
       e.preventDefault();
       const nm = document.getElementById("formName"), ph = document.getElementById("formPhone"), sv = document.getElementById("formService"), ms = document.getElementById("formMessage");
       let hasError = false;
-      
+
       if (nm.value.trim().length < 2) { nm.classList.add("error"); nm.closest(".form-group").classList.add("has-error"); hasError = true; }
       if (ph.value.replace(/\D/g, "").length < 11) { ph.classList.add("error"); ph.closest(".form-group").classList.add("has-error"); hasError = true; }
       if (sv.value.trim().length === 0) { sv.classList.add("error"); sv.closest(".form-group").classList.add("has-error"); hasError = true; }
       if (hasError) { const firstError = rForm.querySelector(".form-input.error"); if (firstError) firstError.focus(); return; }
-      
+
       sBtn.classList.add("loading"); sBtn.disabled = true;
-      const params = new URLSearchParams(); 
-      params.append("name", nm.value.trim()); 
-      params.append("phone", ph.value); 
-      params.append("service", sv.value.trim()); 
+      const params = new URLSearchParams();
+      params.append("name", nm.value.trim());
+      params.append("phone", ph.value);
+      params.append("service", sv.value.trim());
       params.append("message", ms.value.trim());
-      
-      try { 
-        await fetch(GOOGLE_SCRIPT_URL, { 
-          method: "POST", 
-          headers: { "Content-Type": "application/x-www-form-urlencoded" }, 
-          body: params.toString(), 
-          mode: "no-cors" 
+
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: params.toString(),
+          mode: "no-cors"
         });
-        
-        rForm.style.display = "none"; 
+
+        rForm.style.display = "none";
         document.getElementById("formSuccess").classList.add("active");
-        
+
         // Яндекс Метрика - срабатывание цели (лид)
         if (typeof ym !== 'undefined') {
           ym(112801992, 'reachGoal', 'lead');
         }
-        
-      } catch (err) { 
+
+      } catch (err) {
         console.error("Ошибка отправки формы:", err);
         alert("Произошла ошибка при отправке. Пожалуйста, напишите нам в Telegram или позвоните напрямую.");
-        sBtn.classList.remove("loading"); 
+        sBtn.classList.remove("loading");
         sBtn.disabled = false;
       }
     };
 
-    /* =====================================================
-       9. АНИМАЦИИ
-    ===================================================== */
+      // АНИМАЦИИ 
     const obs = new IntersectionObserver(entries => { entries.forEach(x => { if (x.isIntersecting) { x.target.classList.add("visible"); obs.unobserve(x.target); } }); }, { threshold: 0.1 });
     document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
-    
+
     if (window.gsap && window.innerWidth > 992) {
       document.querySelectorAll(".button-accent").forEach(b => {
         b.addEventListener("mousemove", e => { const r = b.getBoundingClientRect(); gsap.to(b, { x: (e.clientX - r.left - r.width / 2) * 0.15, y: (e.clientY - r.top - r.height / 2) * 0.15, duration: 0.4 }); });
@@ -1198,9 +1360,7 @@
       });
     }
 
-    /* =====================================================
-       10. COOKIE БАННЕР ЛОГИКА
-    ===================================================== */
+      // COOKIE БАННЕР ЛОГИКА 
     const cookieBanner = document.getElementById('cookieBanner');
     const cookieAcceptBtn = document.getElementById('cookieAcceptBtn');
 
@@ -1214,41 +1374,7 @@
       setTimeout(() => cookieBanner.style.display = 'none', 300);
     };
 
-  }); 
+  }); // Конец DOMContentLoaded
   </script>
-
-  <script>
-    /* Надёжный автозапуск hero-видео на мобильных Safari/Chrome */
-    (function () {
-      const video = document.querySelector('.hero-video');
-      if (!video) return;
-
-      video.muted = true;
-      video.defaultMuted = true;
-      video.setAttribute('muted', '');
-      video.setAttribute('playsinline', '');
-      video.setAttribute('webkit-playsinline', '');
-      video.setAttribute('autoplay', '');
-
-      const startVideo = () => {
-        const promise = video.play();
-        if (promise && typeof promise.catch === 'function') {
-          promise.catch(() => {});
-        }
-      };
-
-      if (video.readyState >= 2) {
-        startVideo();
-      } else {
-        video.addEventListener('loadeddata', startVideo, { once: true });
-        video.addEventListener('canplay', startVideo, { once: true });
-      }
-
-      document.addEventListener('visibilitychange', () => {
-        if (!document.hidden && video.paused) startVideo();
-      });
-    })();
-  </script>
-
 </body>
 </html>
